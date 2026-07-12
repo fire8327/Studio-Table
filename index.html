@@ -126,36 +126,84 @@
         </section>
 
         <section class="w-full pb-6 lg:pb-[120px] px-4">
-            <div class="flex flex-col gap-8 p-8 bg-white shadow-[0px_10px_30px_0px_#0000000D] w-full max-w-[800px] mx-auto">
-                <div class="flex items-center justify-center gap-5 md:gap-3 text-[12px] leading-[100%] font-semibold text-[#1A1A1A99]">
-                    <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-[#1A1A1A] text-white">
-                        <span>1</span>
-                    </button>
-                    <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                        <span>2</span>
-                    </button>
-                    <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                        <span>3</span>
-                    </button>
-                    <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                        <span>4</span>
-                    </button>
-                    <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                        <span>5</span>
-                    </button>
-                    <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                        <span>6</span>
-                    </button>
-                    <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                        <span>7</span>
-                    </button>
-                    <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                        <span>8</span>
-                    </button>
+            <div class="p-8 bg-white shadow-[0px_10px_30px_0px_#0000000D] w-full max-w-[800px] mx-auto rounded-[12px]">
+                <div class="flex flex-col gap-8">
+                    <div class="flex items-center justify-center gap-5 md:gap-3 text-[12px] leading-[100%] font-semibold text-[#1A1A1A99]">
+                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-[#1A1A1A] text-white">
+                            <span>1</span>
+                        </button>
+                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <span>2</span>
+                        </button>
+                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <span>3</span>
+                        </button>
+                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <span>4</span>
+                        </button>
+                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <span>5</span>
+                        </button>
+                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <span>6</span>
+                        </button>
+                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <span>7</span>
+                        </button>
+                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <span>8</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between text-[14px] leading-[100%] font-semibold uppercase">
+                        <button class="cursor-pointer py-4 px-6 bg-white border border-[#1A1A1A] rounded-[4px]">Назад</button>
+                        <button class="cursor-pointer py-4 px-6 text-white bg-[#1A1A1A] rounded-[4px]">Далее →</button>
+                    </div>
                 </div>
-                <div class="flex items-center justify-between text-[14px] leading-[100%] font-semibold uppercase">
-                    <button class="cursor-pointer py-4 px-6 bg-white border border-[#1A1A1A] rounded-[4px]">Назад</button>
-                    <button class="cursor-pointer py-4 px-6 text-white bg-[#1A1A1A] rounded-[4px]">Далее →</button>
+                <div class="flex flex-col gap-8 items-center">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="64" rx="32" fill="#F5F0EB"/>
+                        <path d="M23.733 31.0664L18.666 45.3343L32.9335 40.2805M21.3328 19.999H21.3462M45.3343 26.6662H45.3476M36.0004 18.6655H36.0137M45.3343 42.6677H45.3476M45.3343 18.6655L42.3474 19.6656C41.4972 19.9488 40.7718 20.5185 40.2951 21.2774C39.8184 22.0362 39.62 22.9371 39.7339 23.826C39.8673 24.9728 38.9739 25.9995 37.8005 25.9995H37.2938C36.1471 25.9995 35.1603 26.7996 34.947 27.9197L34.667 29.3332M45.3343 33.3334L44.2409 32.8934C43.0941 32.44 41.8141 33.1601 41.6007 34.3735C41.4541 35.3069 40.6407 36.0003 39.6939 36.0003H38.6672M30.6667 18.6655L31.1068 19.759C31.5601 20.9057 30.8401 22.1858 29.6267 22.3992C28.6933 22.5325 27.9999 23.3593 27.9999 24.306V25.3328M30.6661 33.3329C33.2396 35.9064 34.4397 38.8934 33.3329 40.0001C32.2262 41.1069 29.2394 39.9068 26.6659 37.3332C24.0924 34.7597 22.8923 31.7727 23.999 30.666C25.1058 29.5592 28.0926 30.7593 30.6661 33.3329Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                        
+                    <div class="flex flex-col gap-4 text-center">
+                        <p class="text-[40px] lg:text-[48px] leading-[100%] font-bold text-[#1A1A1A]">Спасибо!</p>
+                        <p class="text-[16px] lg:text-[18px] leading-[100%] text-[#1A1A1A]/60">Мы уже начинаем готовить вашу концепцию.</p>
+                    </div>
+                    <div class="w-full flex flex-col gap-5 lg:gap-8 p-6 lg:p-8 rounded-[12px] bg-[#F5F0EB]">
+                        <p class="text-[18px] lg:text-[20px] leading-[100%] font-semibold text-[#1A1A1A]">Что вы получите:</p>
+                        <div class="flex flex-col gap-3 lg:gap-4 text-[14px] lg:text-[16px] text-[#1A1A1A]">
+                            <div class="flex items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <p>Персональную концепцию мероприятия</p>                                    
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <p>Подбор меню</p>                                    
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <p>Визуальную презентацию</p>                                    
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <p>Расчёт стоимости</p>                                    
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <p>Studio Box для дегустации (при необходимости)</p>                                    
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cursor-pointer bg-[#1A1A1A] text-white py-5 text-center w-full text-[16px] leading-[100%] font-bold rounded-[8px]">Получить концепцию</button>
                 </div>
             </div>
         </section>
