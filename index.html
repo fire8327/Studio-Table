@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Assets/CSS/output.css">
 </head>
 <body class="font-montserrat bg-white">
-    <header class="py-5 px-6 lg:px-4 w-full font-instrument">
+    <header class="py-5 px-6 lg:px-4 w-full font-instrument bg-white relative">
         <div class="max-w-[1280px] mx-auto flex items-center justify-between">
             <a href="index.html" class="flex flex-col gap-0.5 items-center text-center">
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,13 +16,21 @@
                 <span class="text-[14px] leading-[17px] font-bold text-[#1A1A1A] uppercase">STUDIO TABLE</span>                 
                 <span class="text-[8px] leading-[10px] font-medium text-[#1A1A1A]/60">Catering & Events</span>
             </a>
-            <div class="flex items-center gap-8 text-[14px] leading-[17px] font-semibold text-[#1A1A1A] uppercase">
+            <div id="menu" class="max-lg:absolute max-lg:left-0 max-lg:top-0 max-lg:translate-y-[-600px] max-lg:flex-col max-lg:w-full max-lg:bg-white max-lg:py-4 max-lg:border-t border-[#1A1A1A]/30 max-lg:shadow-lg max-lg:rounded-b-xl transition-all duration-500 flex items-center gap-8 text-[14px] leading-[17px] font-semibold text-[#1A1A1A] uppercase">
                 <a href="#">Услуги</a>
                 <a href="#">О нас</a>
                 <a href="#">Портфолио</a>
                 <a href="#">Контакты</a>
             </div>
+            <button class="cursor-pointer lg:hidden" id="toggler">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.00079 4.99921H19.9992M4.00079 12H19.9992M4.00079 19.0008H19.9992" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                </svg>                    
+            </button>
         </div>
     </header>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="Assets/JS/main.js"></script>
 </body>
 </html>
