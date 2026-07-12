@@ -12,3 +12,6 @@ $(".switchButton").each((i, el) => {
         $(el).removeClass("bg-white")
     })
 })
+
+/* tabs */
+$("#tabs").tabs()

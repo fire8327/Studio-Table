@@ -127,39 +127,77 @@
 
         <section class="w-full pb-6 lg:pb-[120px] px-4">
             <div class="p-8 bg-white shadow-[0px_10px_30px_0px_#0000000D] w-full max-w-[800px] mx-auto rounded-[12px]">
-                <div class="flex flex-col gap-8">
-                    <div class="flex items-center justify-center gap-5 md:gap-3 text-[12px] leading-[100%] font-semibold text-[#1A1A1A99]">
-                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-[#1A1A1A] text-white">
-                            <span>1</span>
-                        </button>
-                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                            <span>2</span>
-                        </button>
-                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                            <span>3</span>
-                        </button>
-                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                            <span>4</span>
-                        </button>
-                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                            <span>5</span>
-                        </button>
-                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                            <span>6</span>
-                        </button>
-                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                            <span>7</span>
-                        </button>
-                        <button class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                            <span>8</span>
-                        </button>
+                <div id="tabs" class="flex flex-col gap-8">
+                    <ul class="flex items-center justify-center gap-5 md:gap-3 text-[12px] leading-[100%] font-semibold text-[#1A1A1A99]">
+                        <li>                            
+                            <a href="#tab1" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-[#1A1A1A] text-white">
+                                <span>1</span>
+                            </a>
+                        </li>
+                        <li>                            
+                            <a href="#tab2" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                                <span>2</span>
+                            </a>
+                        </li>
+                        <li>                            
+                            <a href="#tab3" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                                <span>3</span>
+                            </a>
+                        </li>
+                        <li>                            
+                            <a href="#tab4" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                                <span>4</span>
+                            </a>
+                        </li>
+                        <li>                            
+                            <a href="#tab5" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                                <span>5</span>
+                            </a>
+                        </li>
+                        <li>                            
+                            <a href="#tab6" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                                <span>6</span>
+                            </a>
+                        </li>
+                        <li>                            
+                            <a href="#tab7" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                                <span>7</span>
+                            </a>
+                        </li>
+                        <li>                            
+                            <a href="#tab8" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                                <span>8</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="tab1" class="flex flex-col gap-4 text-center">
+                        <p class="text-[32px] leading-[100%] text-[#1A1A1A]">Сколько гостей планируете?</p>
+                        <p class="text-[15px] leading-[100%] text-[#1A1A1A]/60">Это поможет нам предложить идеальные решения для вашего события.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-[14px] leading-[100%] font-medium text-[#1A1A1A]">
+                            <label class="w-full flex">
+                                <input type="radio" name="guests" class="sr-only peer" value="до 20" checked>
+                                <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">до 20</span>
+                            </label>
+                            <label class="w-full flex">
+                                <input type="radio" name="guests" class="sr-only peer" value="20 – 50">
+                                <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">20 – 50</span>
+                            </label>
+                            <label class="w-full flex">
+                                <input type="radio" name="guests" class="sr-only peer" value="50 – 100">
+                                <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">50 – 100</span>
+                            </label>
+                            <label class="w-full flex">
+                                <input type="radio" name="guests" class="sr-only peer" value="более 100">
+                                <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">более 100</span>
+                            </label>
+                        </div>
                     </div>
                     <div class="flex items-center justify-between text-[14px] leading-[100%] font-semibold uppercase">
                         <button class="cursor-pointer py-4 px-6 bg-white border border-[#1A1A1A] rounded-[4px]">Назад</button>
                         <button class="cursor-pointer py-4 px-6 text-white bg-[#1A1A1A] rounded-[4px]">Далее →</button>
                     </div>
                 </div>
-                <div class="flex flex-col gap-8 items-center">
+                <div class="flex flex-col gap-8 items-center" hidden>
                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="64" height="64" rx="32" fill="#F5F0EB"/>
                         <path d="M23.733 31.0664L18.666 45.3343L32.9335 40.2805M21.3328 19.999H21.3462M45.3343 26.6662H45.3476M36.0004 18.6655H36.0137M45.3343 42.6677H45.3476M45.3343 18.6655L42.3474 19.6656C41.4972 19.9488 40.7718 20.5185 40.2951 21.2774C39.8184 22.0362 39.62 22.9371 39.7339 23.826C39.8673 24.9728 38.9739 25.9995 37.8005 25.9995H37.2938C36.1471 25.9995 35.1603 26.7996 34.947 27.9197L34.667 29.3332M45.3343 33.3334L44.2409 32.8934C43.0941 32.44 41.8141 33.1601 41.6007 34.3735C41.4541 35.3069 40.6407 36.0003 39.6939 36.0003H38.6672M30.6667 18.6655L31.1068 19.759C31.5601 20.9057 30.8401 22.1858 29.6267 22.3992C28.6933 22.5325 27.9999 23.3593 27.9999 24.306V25.3328M30.6661 33.3329C33.2396 35.9064 34.4397 38.8934 33.3329 40.0001C32.2262 41.1069 29.2394 39.9068 26.6659 37.3332C24.0924 34.7597 22.8923 31.7727 23.999 30.666C25.1058 29.5592 28.0926 30.7593 30.6661 33.3329Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
@@ -238,6 +276,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
     <script src="Assets/JS/main.js"></script>
 </body>
 </html>
