@@ -208,6 +208,9 @@
   .grid {
     display: grid;
   }
+  .hidden {
+    display: none;
+  }
   .table {
     display: table;
   }
@@ -216,6 +219,12 @@
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
+  .h-\[140px\] {
+    height: 140px;
   }
   .h-px {
     height: 1px;
@@ -547,6 +556,16 @@
       color: var(--color-white);
     }
   }
+  .placeholder\:text-\[\#1A1A1A99\] {
+    &::placeholder {
+      color: #1A1A1A99;
+    }
+  }
+  .placeholder\:text-\[\#1A1A1A\]\/60 {
+    &::placeholder {
+      color: color-mix(in oklab, #1A1A1A 60%, transparent);
+    }
+  }
   .last\:col-span-full {
     &:last-child {
       grid-column: 1 / -1;
@@ -706,6 +725,11 @@
   .lg\:h-16 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:h-40 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 40);
     }
   }
   .lg\:w-16 {
