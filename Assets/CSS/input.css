@@ -15,3 +15,7 @@
     font-variation-settings:
         "wdth" 100;
 }
+
+.ui-tabs-active > .ui-tabs-anchor {
+    @apply bg-[#1A1A1A] text-white
+}

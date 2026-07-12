@@ -128,73 +128,118 @@
         <section class="w-full pb-6 lg:pb-[120px] px-4">
             <div class="p-8 bg-white shadow-[0px_10px_30px_0px_#0000000D] w-full max-w-[800px] mx-auto rounded-[12px]">
                 <div id="tabs" class="flex flex-col gap-8">
-                    <ul class="flex items-center justify-center gap-5 md:gap-3 text-[12px] leading-[100%] font-semibold text-[#1A1A1A99]">
+                    <ul class="flex items-center justify-center gap-3 text-[12px] leading-[100%] font-semibold text-[#1A1A1A99]">
                         <li>                            
-                            <a href="#tab1" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-[#1A1A1A] text-white">
+                            <a href="#tab1" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
                                 <span>1</span>
                             </a>
                         </li>
                         <li>                            
-                            <a href="#tab2" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <a href="#tab2" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
                                 <span>2</span>
                             </a>
                         </li>
                         <li>                            
-                            <a href="#tab3" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <a href="#tab3" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
                                 <span>3</span>
                             </a>
                         </li>
                         <li>                            
-                            <a href="#tab4" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <a href="#tab4" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
                                 <span>4</span>
                             </a>
                         </li>
                         <li>                            
-                            <a href="#tab5" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <a href="#tab5" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
                                 <span>5</span>
                             </a>
                         </li>
                         <li>                            
-                            <a href="#tab6" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <a href="#tab6" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
                                 <span>6</span>
                             </a>
                         </li>
                         <li>                            
-                            <a href="#tab7" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <a href="#tab7" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
                                 <span>7</span>
                             </a>
                         </li>
                         <li>                            
-                            <a href="#tab8" class="switchButton cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
+                            <a href="#tab8" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
                                 <span>8</span>
                             </a>
                         </li>
                     </ul>
                     <div id="tab1" class="flex flex-col gap-4 text-center">
-                        <p class="text-[32px] leading-[100%] text-[#1A1A1A]">Сколько гостей планируете?</p>
-                        <p class="text-[15px] leading-[100%] text-[#1A1A1A]/60">Это поможет нам предложить идеальные решения для вашего события.</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-[14px] leading-[100%] font-medium text-[#1A1A1A]">
-                            <label class="w-full flex">
+                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Сколько гостей планируете?</p>
+                        <p class="text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A]/60">Это поможет нам предложить идеальные решения для вашего события.</p>
+                        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-[14px] leading-[100%] font-medium text-[#1A1A1A]">
+                            <label class="flex">
                                 <input type="radio" name="guests" class="sr-only peer" value="до 20" checked>
                                 <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">до 20</span>
                             </label>
-                            <label class="w-full flex">
+                            <label class="flex">
                                 <input type="radio" name="guests" class="sr-only peer" value="20 – 50">
                                 <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">20 – 50</span>
                             </label>
-                            <label class="w-full flex">
+                            <label class="flex">
                                 <input type="radio" name="guests" class="sr-only peer" value="50 – 100">
                                 <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">50 – 100</span>
                             </label>
-                            <label class="w-full flex">
+                            <label class="flex">
                                 <input type="radio" name="guests" class="sr-only peer" value="более 100">
                                 <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">более 100</span>
                             </label>
                         </div>
                     </div>
+                    <div id="tab2" class="flex flex-col gap-8">
+                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Какой формат мероприятия?</p>
+                        <div class="flex items-center gap-3 flex-wrap text-[14px] leading-[100%] font-medium text-[#1A1A1A] w-full">
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Завтрак" checked>
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Завтрак</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Бранч">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Бранч</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Обед">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Обед</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Коктейль">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Коктейль</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Ужин">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Ужин</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Корпоратив">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Корпоратив</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Презентация">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Презентация</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="День рождения">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">День рождения</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Свадьба">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Свадьба</span>
+                            </label>
+                            <label class="flex">
+                                <input type="radio" name="format" class="sr-only peer" value="Другое">
+                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Другое</span>
+                            </label>
+                        </div>
+                    </div>
                     <div class="flex items-center justify-between text-[14px] leading-[100%] font-semibold uppercase">
-                        <button class="cursor-pointer py-4 px-6 bg-white border border-[#1A1A1A] rounded-[4px]">Назад</button>
-                        <button class="cursor-pointer py-4 px-6 text-white bg-[#1A1A1A] rounded-[4px]">Далее →</button>
+                        <button id="tabPrevButton" class="cursor-pointer py-4 px-6 bg-white border border-[#1A1A1A] rounded-[4px]">Назад</button>
+                        <button id="tabNextButton" class="cursor-pointer py-4 px-6 text-white bg-[#1A1A1A] rounded-[4px]">Далее →</button>
                     </div>
                 </div>
                 <div class="flex flex-col gap-8 items-center" hidden>
