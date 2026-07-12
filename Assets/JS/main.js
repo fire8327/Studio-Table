@@ -20,3 +20,8 @@ $("#tabPrevButton").click(function() {
         $("#tabs").tabs("option", "active", (activeIndex - 1 + totalTabs) % totalTabs)
     }
 })
+
+/* endButton */
+$("#endButton, #finalPageButton").click(() => {
+    $("#finalPage, #tabs").toggleClass("hidden")
+})
