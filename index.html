@@ -175,7 +175,7 @@
                         <p class="text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A]/60">Это поможет нам предложить идеальные решения для вашего события.</p>
                         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-[14px] leading-[100%] font-medium text-[#1A1A1A]">
                             <label class="flex">
-                                <input type="radio" name="guests" class="sr-only peer" value="до 20" checked>
+                                <input type="radio" name="guests" class="sr-only peer" value="до 20">
                                 <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">до 20</span>
                             </label>
                             <label class="flex">
@@ -183,7 +183,7 @@
                                 <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">20 – 50</span>
                             </label>
                             <label class="flex">
-                                <input type="radio" name="guests" class="sr-only peer" value="50 – 100">
+                                <input type="radio" name="guests" class="sr-only peer" value="50 – 100" checked>
                                 <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">50 – 100</span>
                             </label>
                             <label class="flex">
@@ -196,7 +196,7 @@
                         <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Какой формат мероприятия?</p>
                         <div class="flex items-center gap-3 flex-wrap text-[14px] leading-[100%] font-medium text-[#1A1A1A] w-full">
                             <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Завтрак" checked>
+                                <input type="radio" name="format" class="sr-only peer" value="Завтрак">
                                 <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Завтрак</span>
                             </label>
                             <label class="flex">
@@ -208,7 +208,7 @@
                                 <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Обед</span>
                             </label>
                             <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Коктейль">
+                                <input type="radio" name="format" class="sr-only peer" value="Коктейль" checked>
                                 <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Коктейль</span>
                             </label>
                             <label class="flex">
@@ -234,6 +234,60 @@
                             <label class="flex">
                                 <input type="radio" name="format" class="sr-only peer" value="Другое">
                                 <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Другое</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="tab3" class="flex flex-col gap-8">
+                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Выберите атмосферу мероприятия</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <label class="flex last:col-span-full cursor-pointer">
+                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Breakfast">
+                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
+                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Breakfast</p>
+                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Спокойное утро, хороший кофе, свежая выпечка, натуральные продукты и лёгкое начало дня.</p>
+                                </div>
+                            </label>
+                            <label class="flex last:col-span-full cursor-pointer">
+                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Summer">
+                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
+                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Summer</p>
+                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Яркие цвета, сезонные продукты, лёгкость и летнее настроение.</p>
+                                </div>
+                            </label>
+                            <label class="flex last:col-span-full cursor-pointer">
+                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Business" checked>
+                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
+                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Business</p>
+                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Современная деловая атмосфера, лаконичная подача, безупречный сервис и внимание к деталям.</p>
+                                </div>
+                            </label>
+                            <label class="flex last:col-span-full cursor-pointer">
+                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Executive">
+                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
+                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Executive</p>
+                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Премиальная сервировка, изысканное меню и сервис для самых важных встреч.</p>
+                                </div>
+                            </label>
+                            <label class="flex last:col-span-full cursor-pointer">
+                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Cocktail">
+                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
+                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Cocktail</p>
+                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Небольшие авторские блюда, красивые коктейли, живая атмосфера общения и лёгкий формат мероприятия.</p>
+                                </div>
+                            </label>
+                            <label class="flex last:col-span-full cursor-pointer">
+                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Celebration">
+                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
+                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Celebration</p>
+                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Праздничная атмосфера, эффектная подача, яркие эмоции и ощущение настоящего события.</p>
+                                </div>
+                            </label>
+                            <label class="flex last:col-span-full cursor-pointer">
+                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Signature">
+                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
+                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Signature</p>
+                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Индивидуальная концепция, созданная специально под ваше мероприятие без готовых шаблонов.</p>
+                                </div>
                             </label>
                         </div>
                     </div>
