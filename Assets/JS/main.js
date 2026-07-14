@@ -48,3 +48,9 @@ $("#tabs").on("tabsactivate", function(event, ui) {
     updateEndButtonVisibility()
 })
 updateEndButtonVisibility()
+
+
+/* formToggler */
+$("#formToggler").click(() => {
+    $("#formSection").show(500)
+})
