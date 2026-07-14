@@ -16,12 +16,14 @@
                 <span class="text-[14px] leading-[17px] font-bold text-[#1A1A1A] uppercase">STUDIO TABLE</span>                 
                 <span class="text-[8px] leading-[10px] font-medium text-[#1A1A1A]/60">Catering & Events</span>
             </a>
-            <div id="menu" class="max-lg:absolute max-lg:left-0 max-lg:top-0 max-lg:translate-y-[-600px] max-lg:flex-col max-lg:w-full max-lg:bg-white max-lg:py-4 max-lg:border-t border-[#1A1A1A]/30 max-lg:shadow-lg max-lg:rounded-b-xl transition-all duration-500 flex items-center gap-8 text-[14px] leading-[17px] font-semibold text-[#1A1A1A] uppercase">
-                <a href="#">Услуги</a>
+            <div id="menu" class="max-lg:absolute max-lg:z-5 max-lg:left-0 max-lg:top-0 max-lg:translate-y-[-600px] max-lg:flex-col max-lg:w-full max-lg:bg-white max-lg:py-4 max-lg:border-t border-[#1A1A1A]/30 max-lg:shadow-lg max-lg:rounded-b-xl transition-all duration-500 flex items-center gap-8 text-[14px] leading-[17px] font-semibold text-[#1A1A1A] uppercase">
                 <a href="#">О нас</a>
+                <a href="#">Процесс</a>
                 <a href="#">Портфолио</a>
                 <a href="#">Контакты</a>
+                <button class="lg:hidden cursor-pointer py-2.5 px-5 text-[12px] leading-[100%] font-semibold text-white bg-[#1A1A1A] uppercase rounded-[4px]">Создать мероприятие</button>
             </div>
+            <button class="max-lg:hidden cursor-pointer py-2.5 px-5 text-[12px] leading-[100%] font-semibold text-white bg-[#1A1A1A] uppercase rounded-[4px]">Создать мероприятие</button>
             <button class="cursor-pointer lg:hidden" id="toggler">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.00079 4.99921H19.9992M4.00079 12H19.9992M4.00079 19.0008H19.9992" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
@@ -33,9 +35,6 @@
     <main>
         <section class="w-full relative">
             <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 text-center z-2">
-                <p class="text-[64px] leading-[110%] font-semibold text-white max-w-[800px] max-lg:hidden">Мы создаём события, которые хочется повторить</p>
-                <p class="text-[20px] leading-[100%] text-white max-lg:hidden">Еда, сервис и атмосфера, продуманные до мелочей</p>
-                <button class="cursor-pointer">
                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" fill="white" fill-opacity="0.25098"/>
                         <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white"/>
@@ -48,84 +47,51 @@
             <img src="Assets/Images/hero/desktop.webp" alt="" class="w-full max-lg:hidden">
         </section>
 
-        <section class="w-full py-6 lg:py-16 px-4">
+        <section class="w-full py-6 lg:py-[120px] px-4">
             <div class="w-full max-w-[1280px] mx-auto flex flex-col gap-8">
-                <div class="flex flex-col gap-3 lg:hidden items-center text-center">
-                    <p class="text-[32px] leading-[110%] font-semibold text-black max-w-[800px] lg:hidden">Мы создаём события, которые хочется повторить</p>
-                    <p class="text-[16px] leading-[100%] text-black/50 lg:hidden">Еда, сервис и атмосфера, продуманные до мелочей</p>
-                </div>
-                <div class="grid grid-col-1 md:grid-cols-3 gap-3 lg:gap-12 max-lg:text-center">
-                    <div class="flex max-lg:flex-col items-center gap-2 lg:gap-4">
-                        <div class="flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 shrink-0 rounded-[24px] border border-[#1A1A1A1A]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15.0002 8.99976L8.99977 15.0002M8.99977 8.99976L15.0002 15.0002M22.0008 12C22.0008 17.5233 17.5233 22.0008 12 22.0008C6.47672 22.0008 1.99921 17.5233 1.99921 12C1.99921 6.47671 6.47672 1.9992 12 1.9992C17.5233 1.9992 22.0008 6.47671 22.0008 12Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
-                            </svg>                                
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <p class="text-[14px] lg:text-[22px] leading-[100%] font-bold text-[#1A1A1A]">Готовые концепции</p>
-                            <p class="text-[12px] lg:text-[16px] leading-[140%] text-[#1A1A1A]/60">Банкеты, фуршеты, пикники и деловые обеды</p>
-                        </div>
-                    </div>
-                    <div class="flex max-lg:flex-col items-center gap-2 lg:gap-4">
-                        <div class="flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 shrink-0 rounded-[24px] border border-[#1A1A1A1A]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 5.99952V12L16.0003 14.0002M22.0008 12C22.0008 17.5233 17.5233 22.0008 12 22.0008C6.47672 22.0008 1.99921 17.5233 1.99921 12C1.99921 6.47671 6.47672 1.9992 12 1.9992C17.5233 1.9992 22.0008 6.47671 22.0008 12Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
-                            </svg>                                                               
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <p class="text-[14px] lg:text-[22px] leading-[100%] font-bold text-[#1A1A1A]">Быстро и точно</p>
-                            <p class="text-[12px] lg:text-[16px] leading-[140%] text-[#1A1A1A]/60">Организуем мероприятие за 3 дня</p>
-                        </div>
-                    </div>
-                    <div class="flex max-lg:flex-col items-center gap-2 lg:gap-4">
-                        <div class="flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 shrink-0 rounded-[24px] border border-[#1A1A1A1A]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 22.0008V12.0002M12 12.0002L3.29004 6.99993M12 12.0002L20.71 6.99993M7.5 4.26931L16.5 9.4196M11 21.7307C11.304 21.9062 11.6489 21.9987 12 21.9987C12.3511 21.9987 12.696 21.9062 13 21.7307L20 17.7305C20.3037 17.5551 20.556 17.3029 20.7315 16.9992C20.9071 16.6956 20.9996 16.3511 21 16.0004V7.99989C20.9996 7.64915 20.9071 7.30466 20.7315 7.001C20.556 6.69733 20.3037 6.44517 20 6.26979L13 2.26956C12.696 2.09402 12.3511 2.0016 12 2.0016C11.6489 2.0016 11.304 2.09402 11 2.26956L4 6.26979C3.69626 6.44517 3.44398 6.69733 3.26846 7.001C3.09294 7.30466 3.00036 7.64915 3 7.99989V16.0004C3.00036 16.3511 3.09294 16.6956 3.26846 16.9992C3.44398 17.3029 3.69626 17.5551 4 17.7305L11 21.7307Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
-                            </svg>                                                                
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <p class="text-[14px] lg:text-[22px] leading-[100%] font-bold text-[#1A1A1A]">Любой формат</p>
-                            <p class="text-[12px] lg:text-[16px] leading-[140%] text-[#1A1A1A]/60">От камерного ужина до масштабного праздника</p>
-                        </div>
-                    </div>
+                <div class="flex flex-col gap-3 lg:gap-6 items-center text-center">
+                    <p class="text-[32px] lg:text-[56px] leading-[110%] font-semibold text-black max-w-[1061px]">Мы создаём события, которые хочется повторить</p>
+                    <p class="text-[16px] lg:text-[20px] leading-[160%] text-black/50">Еда, сервис и атмосфера, продуманные до мелочей</p>
                 </div>
             </div>
         </section>
 
-        <section class="w-full py-6 lg:py-20 px-4 bg-[#1A1A1A]">
-            <div class="flex items-center gap-12 max-w-[1280px] mx-auto">
-                <svg class="max-md:hidden" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="white" stroke-opacity="0.25098"/>
-                    <path d="M14.9674 18.3838C14.3368 19.3008 13.9992 20.3874 13.9992 21.5002C13.9992 23.8002 15.4993 25.5003 16.9994 27.0003L22.5079 32.3323C22.6969 32.544 22.9288 32.7129 23.1882 32.828C23.4476 32.9432 23.7285 33.0018 24.0123 33C24.296 32.9982 24.5762 32.936 24.8341 32.8176C25.092 32.6992 25.3217 32.5273 25.5081 32.3133L31.0005 27.0003C32.5006 25.5003 34.0007 23.7902 34.0007 21.5002C34.0061 20.385 33.6716 19.2945 33.0418 18.3741C32.412 17.4536 31.5168 16.7468 30.4753 16.3476C29.4339 15.9485 28.2956 15.876 27.2119 16.1398C26.1282 16.4035 25.1505 16.9911 24.409 17.8242C24.3566 17.8802 24.2933 17.9249 24.2229 17.9554C24.1526 17.9859 24.0767 18.0017 24 18.0017C23.9233 18.0017 23.8474 17.9859 23.777 17.9554C23.7067 17.9249 23.6433 17.8802 23.5909 17.8242C22.8471 16.9965 21.8697 16.4138 20.7877 16.1532C19.7058 15.8926 18.5703 15.9663 17.5311 16.3646C16.4919 16.7628 15.598 17.4669 14.9674 18.3838Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                </svg>                   
-                <div class="flex flex-col gap-4 md:gap-2 max-md:text-center">
-                    <p class="text-[32px] leading-[100%] text-white">Полный сервис</p>
-                    <p class="text-[16px] lg:text-[18px] leading-[100%] text-white/70">Берём всё на себя: от идеи до последней детали.</p>
-                </div> 
-            </div>
-        </section>
-
-        <section class="w-full py-6 lg:py-20 px-4">
-            <div class="flex flex-col gap-6 lg:gap-10 max-w-[1280px] mx-auto">
-                <p class="text-[22px] lg:text-[32px] leading-[100%] text-[#1A1A1A] max-md:text-center">Полный сервис</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
-                    <div class="flex flex-col gap-2 lg:gap-4">
-                        <img src="Assets/Images/tastes/1.webp" alt="" class="w-full rounded-[8px] lg:rounded-[12px]">
-                        <p class="text-[14px] lg:text-[18px] leading-[100%] font-semibold text-[#1A1A1A]">Фуршетные закуски</p>
+        <section class="w-full md:py-8 bg-[#FBF9F6] md:px-4">
+            <div class="w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-8">
+                <div class="flex flex-col bg-[#FBF9F6] md:bg-white md:rounded-[8px] overflow-hidden lg:shadow-[0px_12px_24px_0px_#1A1A1A05]">
+                    <img src="Assets/Images/cycle/1.webp" alt="" class="w-full max-md:order-last">
+                    <div class="flex flex-col gap-3 lg:gap-4 px-6 py-8 lg:px-8">
+                        <div class="flex items-center gap-3 text-[20px] lg:text-[28px] leading-[120%] font-bold">
+                            <p>1.</p>
+                            <p>Идея</p>
+                        </div>
+                        <p class="text-[15px] lg:text-[18px] leading-[150%] text-[#4A4A4A] md:text-[#6B6B6B]">Каждое событие начинается с разговора. Расскажите, каким вы хотите видеть своё мероприятие. Мы поможем сформулировать идею, подобрать формат и превратить её в цельную концепцию.</p>
                     </div>
-                    <div class="flex flex-col gap-2 lg:gap-4">
-                        <img src="Assets/Images/tastes/2.webp" alt="" class="w-full rounded-[8px] lg:rounded-[12px]">
-                        <p class="text-[14px] lg:text-[18px] leading-[100%] font-semibold text-[#1A1A1A]">Авторская брускетта</p>
+                </div>
+                <div class="flex flex-col bg-[#FBF9F6] md:bg-white md:rounded-[8px] overflow-hidden lg:shadow-[0px_12px_24px_0px_#1A1A1A05] max-md:mt-4">
+                    <img src="Assets/Images/cycle/2.webp" alt="" class="w-full max-md:order-last">
+                    <div class="flex flex-col gap-3 lg:gap-4 px-6 py-8 lg:px-8">
+                        <div class="flex items-center gap-3 text-[20px] lg:text-[28px] leading-[120%] font-bold">
+                            <p>2.</p>
+                            <p>Презентация</p>
+                        </div>
+                        <p class="text-[15px] lg:text-[18px] leading-[150%] text-[#4A4A4A] md:text-[#6B6B6B]">Персональная концепция. Получите презентацию вашего будущего события: меню, стиль, сервировку, оформление и атмосферу. Всё, чтобы увидеть результат ещё до принятия решения.</p>
                     </div>
-                    <div class="flex flex-col gap-2 lg:gap-4">
-                        <img src="Assets/Images/tastes/3.webp" alt="" class="w-full rounded-[8px] lg:rounded-[12px]">
-                        <p class="text-[14px] lg:text-[18px] leading-[100%] font-semibold text-[#1A1A1A]">Изысканная подача</p>
+                </div>
+                <div class="flex flex-col bg-[#FBF9F6] md:bg-white md:rounded-[8px] overflow-hidden lg:shadow-[0px_12px_24px_0px_#1A1A1A05] max-md:mt-4">
+                    <img src="Assets/Images/cycle/3.webp" alt="" class="w-full max-md:order-last">
+                    <div class="flex flex-col gap-3 lg:gap-4 px-6 py-8 lg:px-8">
+                        <div class="flex items-center gap-3 text-[20px] lg:text-[28px] leading-[120%] font-bold">
+                            <p>3.</p>
+                            <p>Дегустация</p>
+                        </div>
+                        <p class="text-[15px] lg:text-[18px] leading-[150%] text-[#4A4A4A] md:text-[#6B6B6B]">Studio Box. Попробуйте изысканные блюда из вашей концепции, оцените фирменный почерк шефа, качество продуктов и эстетичную форму подачи ещё до начала мероприятия.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="w-full pb-6 lg:pb-[120px] px-4">
+        <section class="w-full pb-6 lg:py-[120px] px-4 hidden">
             <div class="p-8 bg-white shadow-[0px_10px_30px_0px_#0000000D] w-full max-w-[800px] mx-auto rounded-[12px]">
                 <div id="tabs" class="flex flex-col gap-8">
                     <ul class="flex items-center justify-center gap-3 text-[12px] leading-[100%] font-semibold text-[#1A1A1A99]">
