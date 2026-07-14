@@ -25,7 +25,7 @@ $("#tabPrevButton").click(function() {
 
 
 /* endButton */
-$("#endButton, #finalPageButton").click(() => {
+$("#endButton").click(() => {
     $("#finalPage, #tabs").toggleClass("hidden")
     $("#tabs").tabs("option", "active", 0)
 })
@@ -51,6 +51,18 @@ updateEndButtonVisibility()
 
 
 /* formToggler */
-$("#formToggler").click(() => {
+$("#formToggler, #orderMobile, #orderDesktop").click(() => {
     $("#formSection").show(500)
+})
+
+$("#orderMobile, #orderDesktop").click(() => {
+    $('html, body').animate({
+        scrollTop: $('#formSection').offset().top
+    }, 500);
+})
+
+
+$("#orderMobile").click(() => {
+    $("#menu").addClass("max-lg:top-0 max-lg:translate-y-[-600px]")
+    $("#menu").removeClass("max-lg:top-full")
 })
