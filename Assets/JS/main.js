@@ -10,11 +10,13 @@ const heroVideo = $("#heroVideo")[0]
 $("#heroPlayButton").click(() => {
     $("#heroOverlay, #heroDim").addClass("hidden")
     heroVideo.play()
+    $("#heroPreview").addClass("hidden")
 })
 
 $("#heroVideo").click(() => {
     heroVideo.pause()
     $("#heroOverlay, #heroDim").removeClass("hidden")
+    $("#heroPreview").removeClass("hidden")
 })
 
 

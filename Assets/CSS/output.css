@@ -210,6 +210,12 @@
   .z-2 {
     z-index: 2;
   }
+  .z-3 {
+    z-index: 3;
+  }
+  .z-23 {
+    z-index: 23;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -228,6 +234,12 @@
   .table {
     display: table;
   }
+  .aspect-3\/2 {
+    aspect-ratio: 3/2;
+  }
+  .aspect-\[3\/2\] {
+    aspect-ratio: 3/2;
+  }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
@@ -236,6 +248,9 @@
   }
   .h-\[140px\] {
     height: 140px;
+  }
+  .h-full {
+    height: 100%;
   }
   .h-px {
     height: 1px;
@@ -380,6 +395,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
