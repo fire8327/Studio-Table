@@ -258,6 +258,15 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
   .w-fit {
     width: fit-content;
   }
@@ -371,6 +380,24 @@
   }
   .border-\[\#1A1A1A\]\/30 {
     border-color: color-mix(in oklab, #1A1A1A 30%, transparent);
+  }
+  .border-\[\#6B6B6B\] {
+    border-color: #6B6B6B;
+  }
+  .border-\[\#6B6B6B\]\/10 {
+    border-color: color-mix(in oklab, #6B6B6B 10%, transparent);
+  }
+  .border-\[\#6B6B6B\]\/15 {
+    border-color: color-mix(in oklab, #6B6B6B 15%, transparent);
+  }
+  .border-\[\#6B6B6B\]\/20 {
+    border-color: color-mix(in oklab, #6B6B6B 20%, transparent);
+  }
+  .border-\[\#6B6B6B\]\/30 {
+    border-color: color-mix(in oklab, #6B6B6B 30%, transparent);
+  }
+  .border-\[\#6B6B6B\]\/40 {
+    border-color: color-mix(in oklab, #6B6B6B 40%, transparent);
   }
   .bg-\[\#1A1A1A\] {
     background-color: #1A1A1A;
@@ -758,6 +785,11 @@
       text-align: center;
     }
   }
+  .md\:w-24 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 24);
+    }
+  }
   .md\:w-fit {
     @media (width >= 48rem) {
       width: fit-content;
@@ -886,6 +918,17 @@
   .lg\:gap-8 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 8);
+    }
+  }
+  .lg\:border {
+    @media (width >= 64rem) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
+  .lg\:border-\[\#6B6B6B\] {
+    @media (width >= 64rem) {
+      border-color: #6B6B6B;
     }
   }
   .lg\:p-8 {
