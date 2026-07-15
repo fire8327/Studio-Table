@@ -4,22 +4,6 @@ $("#toggler").click(() => {
 })
 
 
-/* hero video */
-const heroVideo = $("#heroVideo")[0]
-
-$("#heroPlayButton").click(() => {
-    $("#heroOverlay, #heroDim").addClass("hidden")
-    heroVideo.play()
-    $("#heroPreview").addClass("hidden")
-})
-
-$("#heroVideo").click(() => {
-    heroVideo.pause()
-    $("#heroOverlay, #heroDim").removeClass("hidden")
-    $("#heroPreview").removeClass("hidden")
-})
-
-
 /* tabs */
 $("#tabs").tabs()
 
@@ -28,7 +12,7 @@ let lastIndex = totalTabs - 1 // последняя вкладка
 
 $("#tabNextButton").click(function() {
     const activeIndex = $("#tabs").tabs("option", "active")
-    if(activeIndex < 8) {
+    if(activeIndex < lastIndex) {
         $("#tabs").tabs("option", "active", (activeIndex + 1) % totalTabs)
     }
 })
@@ -40,8 +24,35 @@ $("#tabPrevButton").click(function() {
 })
 
 
-/* endButton */
+/* endButton — отправка заявки в notifications через гейтвей */
+const GATEWAY_ENDPOINT = "https://agw.studiotable.ru/api/notifications/v1/delivery/send"
+const NOTIFICATION_UID = "studiotable_request"
+
+const collectFormData = () => {
+    const checked = (name) => $(`input[name="${name}"]:checked`).val() || ""
+    const services = $('input[name="services"]:checked').map((_, el) => el.value).get().join(", ")
+    return {
+        guests: checked("guests"),
+        format: checked("format"),
+        atmosphere: checked("atmosphere"),
+        services: services,
+        budget: checked("budget"),
+        date: checked("date"),
+        place: checked("place"),
+        wishes: $('textarea[name="wishes"]').val() || "",
+        name: $('input[name="user_name"]').val() || "",
+        phone: $('input[name="user_phone"]').val() || "",
+        email: $('input[name="user_email"]').val() || ""
+    }
+}
+
 $("#endButton").click(() => {
+    fetch(GATEWAY_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ notificationUid: NOTIFICATION_UID, data: collectFormData() })
+    }).catch((e) => console.error("Не удалось отправить заявку:", e))
+
     $("#finalPage, #tabs").toggleClass("hidden")
     $("#tabs").tabs("option", "active", 0)
 })
