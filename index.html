@@ -34,7 +34,8 @@
 
     <main>
         <section class="w-full relative">
-            <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 text-center z-2">
+            <div id="heroOverlay" class="absolute inset-0 flex flex-col items-center justify-center gap-6 text-center z-2">
+                <button id="heroPlayButton" type="button" class="cursor-pointer">
                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" fill="white" fill-opacity="0.25098"/>
                         <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white"/>
@@ -42,9 +43,8 @@
                     </svg>                    
                 </button>
             </div>
-            <div class="absolute inset-0 bg-black/40 z-1"></div>
-            <img src="Assets/Images/hero/mobile.webp" alt="" class="w-full lg:hidden">
-            <img src="Assets/Images/hero/desktop.webp" alt="" class="w-full max-lg:hidden">
+            <div id="heroDim" class="absolute inset-0 bg-black/40 z-1"></div>">
+            <video loop id="heroVideo" src="Assets/Images/hero/main.mp4" class="w-full" playsinline preload="metadata"></video>
         </section>
 
         <section class="w-full py-6 lg:py-[120px] px-4">

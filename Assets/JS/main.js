@@ -4,6 +4,20 @@ $("#toggler").click(() => {
 })
 
 
+/* hero video */
+const heroVideo = $("#heroVideo")[0]
+
+$("#heroPlayButton").click(() => {
+    $("#heroOverlay, #heroDim").addClass("hidden")
+    heroVideo.play()
+})
+
+$("#heroVideo").click(() => {
+    heroVideo.pause()
+    $("#heroOverlay, #heroDim").removeClass("hidden")
+})
+
+
 /* tabs */
 $("#tabs").tabs()
 
