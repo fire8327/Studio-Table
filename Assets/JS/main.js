@@ -28,7 +28,7 @@ let lastIndex = totalTabs - 1 // последняя вкладка
 
 $("#tabNextButton").click(function() {
     const activeIndex = $("#tabs").tabs("option", "active")
-    if(activeIndex < 7) {
+    if(activeIndex < 8) {
         $("#tabs").tabs("option", "active", (activeIndex + 1) % totalTabs)
     }
 })
