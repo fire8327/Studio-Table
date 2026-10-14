@@ -19,3 +19,7 @@
 .ui-tabs-active > .ui-tabs-anchor {
     @apply bg-[#1A1A1A] text-white
 }
+
+.input-error {
+    border-color: #ef4444 !important;
+}
