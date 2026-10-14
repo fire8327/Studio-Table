@@ -4,6 +4,38 @@ $("#toggler").click(() => {
 })
 
 
+/* hero video */
+const heroVideo = $("#heroVideo")[0]
+
+if (heroVideo) {
+    const playHeroVideo = () => {
+        $("#heroPreview, #heroOverlay, #heroDim").addClass("hidden")
+        heroVideo.play().catch((err) => console.warn("Video playback prevented:", err))
+    }
+
+    const pauseHeroVideo = () => {
+        heroVideo.pause()
+        $("#heroOverlay, #heroDim").removeClass("hidden")
+    }
+
+    $("#heroPlayButton").click(() => {
+        playHeroVideo()
+    })
+
+    $("#heroVideo").click(() => {
+        if (heroVideo.paused) {
+            playHeroVideo()
+        } else {
+            pauseHeroVideo()
+        }
+    })
+
+    heroVideo.addEventListener("ended", () => {
+        pauseHeroVideo()
+    })
+}
+
+
 /* tabs */
 $("#tabs").tabs()
 
