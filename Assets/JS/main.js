@@ -230,7 +230,7 @@ $(".format-card").click(function() {
 })
 
 /* слайдер с плавным растворением кадров друг в друге (cross-dissolve) */
-const initSlider = (containerId, intervalMs = 4500) => {
+const initSlider = (containerId, staticDurationMs = 3000, fadeDurationMs = 2000) => {
     const $container = $(containerId)
     if (!$container.length) return
 
@@ -238,8 +238,9 @@ const initSlider = (containerId, intervalMs = 4500) => {
     if ($slides.length <= 1) return
 
     let currentIndex = 0
+    let timer = null
 
-    setInterval(() => {
+    const advanceSlide = () => {
         const nextIndex = (currentIndex + 1) % $slides.length
         const $current = $slides.eq(currentIndex)
         const $next = $slides.eq(nextIndex)
@@ -255,7 +256,10 @@ const initSlider = (containerId, intervalMs = 4500) => {
         })
 
         currentIndex = nextIndex
-    }, intervalMs)
+        timer = setTimeout(advanceSlide, staticDurationMs + fadeDurationMs)
+    }
+
+    timer = setTimeout(advanceSlide, staticDurationMs)
 }
 
-initSlider("#slider1x1", 4500)
+initSlider("#slider1x1", 3000, 2000)
