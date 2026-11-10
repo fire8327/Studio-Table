@@ -61,50 +61,80 @@
 
     <main>
         <section class="w-full pt-8 pb-12 sm:pt-12 sm:pb-16 px-4 bg-white overflow-hidden">
-            <div class="max-w-[1080px] mx-auto flex flex-col gap-8 sm:gap-10">
-                <div class="relative flex items-center justify-between gap-3 sm:gap-6">
-                    <div class="flex flex-col gap-3 sm:gap-4 max-w-[270px] sm:max-w-[440px] z-1">
-                        <h1 class="font-cormorant text-[32px] sm:text-[46px] lg:text-[54px] leading-[105%] font-normal text-[#1A1A1A] tracking-[-0.01em]">
+            <div class="max-w-[1080px] mx-auto flex flex-col gap-12 sm:gap-16">
+                <div class="relative flex items-center justify-between gap-3 sm:gap-8 lg:gap-12">
+                    <div class="flex-1 min-w-0 flex flex-col gap-3 sm:gap-4 lg:gap-5 max-w-[520px] z-1">
+                        <span class="font-montserrat text-[11px] sm:text-[12px] uppercase tracking-[0.18em] font-medium text-[#1A1A1A]/50">
+                            Кейтеринг и события • Москва
+                        </span>
+                        <h1 class="font-cormorant text-[32px] sm:text-[48px] lg:text-[58px] leading-[102%] font-normal text-[#1A1A1A] tracking-[-0.01em]">
                             Организация<br>
                             мероприятий<br>
                             в Москве
                         </h1>
-                        <p class="font-montserrat text-[13px] sm:text-[15px] lg:text-[16px] leading-[145%] text-[#1A1A1A]/70 max-w-[320px] sm:max-w-[380px]">
-                            Авторская кухня, эстетика каждой детали и безупречный сервис.
+                        <p class="font-montserrat text-[13px] sm:text-[15px] lg:text-[16px] leading-[150%] text-[#1A1A1A]/75 max-w-[440px]">
+                            Авторская кухня, эстетика каждой детали и безупречный сервис для событий любого формата.
                         </p>
+                        <div class="hidden sm:flex flex-wrap items-center gap-x-5 gap-y-2 pt-1 font-montserrat text-[12px] lg:text-[13px] text-[#1A1A1A]/70">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#1A1A1A]/60"></span>
+                                <span>От 10 до 500+ гостей</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#1A1A1A]/60"></span>
+                                <span>Дегустация сета</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#1A1A1A]/60"></span>
+                                <span>Расчет за 30 минут</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="flex-1 flex justify-end items-center -mr-1 sm:mr-0">
-                        <div class="w-[180px] sm:w-[300px] lg:w-[380px] aspect-4/3 rounded-[20px] bg-[#FBF9F6] border-2 border-dashed border-[#1A1A1A]/15 flex flex-col items-center justify-center gap-2.5 text-[#1A1A1A]/40 p-4 text-center select-none">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                <circle cx="8.5" cy="8.5" r="1.5"/>
-                                <polyline points="21 15 16 10 5 21"/>
-                            </svg>
-                            <span class="text-[11px] sm:text-[13px] font-medium leading-[125%]">Место для фото блюда</span>
+                    <div class="shrink-0 flex justify-end items-center">
+                        <div id="dishesSlider" class="relative w-[180px] sm:w-[320px] md:w-[400px] lg:w-[480px] aspect-square select-none">
+                            <img src="Assets/Images/dishes/dish_1_beef_wellington.png" alt="Блюдо 1" class="slider-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-100">
+                            <img src="Assets/Images/dishes/dish_2_pan_seared_fish.png" alt="Блюдо 2" class="slider-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 pointer-events-none">
+                            <img src="Assets/Images/dishes/dish_3_langoustine_caviar.png" alt="Блюдо 3" class="slider-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 pointer-events-none">
                         </div>
                     </div>
                 </div>
-                <div class="relative flex items-center justify-between gap-3 sm:gap-6">
-                    <div class="flex flex-col gap-3 sm:gap-4 max-w-[270px] sm:max-w-[440px] z-1">
-                        <h1 class="font-cormorant text-[32px] sm:text-[46px] lg:text-[54px] leading-[105%] font-normal text-[#1A1A1A] tracking-[-0.01em]">
+
+                <div class="relative flex items-center justify-between gap-3 sm:gap-8 lg:gap-12">
+                    <div class="flex-1 min-w-0 flex flex-col gap-3 sm:gap-4 lg:gap-5 max-w-[520px] z-1">
+                        <span class="font-montserrat text-[11px] sm:text-[12px] uppercase tracking-[0.18em] font-medium text-[#1A1A1A]/50">
+                            Кейтеринг и события • Москва
+                        </span>
+                        <h1 class="font-cormorant text-[32px] sm:text-[48px] lg:text-[58px] leading-[102%] font-normal text-[#1A1A1A] tracking-[-0.01em]">
                             Организация<br>
                             мероприятий<br>
                             в Москве
                         </h1>
-                        <p class="font-montserrat text-[13px] sm:text-[15px] lg:text-[16px] leading-[145%] text-[#1A1A1A]/70 max-w-[320px] sm:max-w-[380px]">
-                            Авторская кухня, эстетика каждой детали и безупречный сервис.
+                        <p class="font-montserrat text-[13px] sm:text-[15px] lg:text-[16px] leading-[150%] text-[#1A1A1A]/75 max-w-[440px]">
+                            Авторская кухня, эстетика каждой детали и безупречный сервис для событий любого формата.
                         </p>
+                        <div class="hidden sm:flex flex-wrap items-center gap-x-5 gap-y-2 pt-1 font-montserrat text-[12px] lg:text-[13px] text-[#1A1A1A]/70">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#1A1A1A]/60"></span>
+                                <span>От 10 до 500+ гостей</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#1A1A1A]/60"></span>
+                                <span>Дегустация сета</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#1A1A1A]/60"></span>
+                                <span>Расчет за 30 минут</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="flex-1 flex justify-end items-center -mr-1 sm:mr-0">
-                        <div class="w-[180px] sm:w-[300px] lg:w-[380px] aspect-4/3 rounded-[20px] bg-[#FBF9F6] border-2 border-dashed border-[#1A1A1A]/15 flex flex-col items-center justify-center gap-2.5 text-[#1A1A1A]/40 p-4 text-center select-none">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                <circle cx="8.5" cy="8.5" r="1.5"/>
-                                <polyline points="21 15 16 10 5 21"/>
-                            </svg>
-                            <span class="text-[11px] sm:text-[13px] font-medium leading-[125%]">Место для фото блюда</span>
+                    <div class="shrink-0 flex justify-end items-center">
+                        <div id="slider1x1" class="relative w-[180px] sm:w-[320px] md:w-[400px] lg:w-[480px] aspect-square rounded-[20px] sm:rounded-[28px] overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.08)] select-none">
+                            <img src="Assets/Images/slider/1x1/slide-1.png" alt="Слайд 1" class="slider-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+                            <img src="Assets/Images/slider/1x1/slide-2.png" alt="Слайд 2" class="slider-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 pointer-events-none">
+                            <img src="Assets/Images/slider/1x1/slide-3.png" alt="Слайд 3" class="slider-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 pointer-events-none">
+                            <img src="Assets/Images/slider/1x1/slide-4.png" alt="Слайд 4" class="slider-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 pointer-events-none">
                         </div>
                     </div>
                 </div>

@@ -228,3 +228,23 @@ $(".format-card").click(function() {
         scrollTop: $('#heroFormCard').offset().top - offset
     }, 500)
 })
+
+/* слайдеры с переключением каждые 3 секунды */
+const initSlider = (containerId, intervalMs = 3000) => {
+    const $container = $(containerId)
+    if (!$container.length) return
+
+    const $slides = $container.find(".slider-slide")
+    if ($slides.length <= 1) return
+
+    let currentIndex = 0
+    setInterval(() => {
+        const nextIndex = (currentIndex + 1) % $slides.length
+        $slides.eq(currentIndex).removeClass("opacity-100").addClass("opacity-0 pointer-events-none")
+        $slides.eq(nextIndex).removeClass("opacity-0 pointer-events-none").addClass("opacity-100")
+        currentIndex = nextIndex
+    }, intervalMs)
+}
+
+initSlider("#dishesSlider", 3000)
+initSlider("#slider1x1", 3000)
