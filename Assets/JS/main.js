@@ -8,8 +8,24 @@ $("#toggler").click(() => {
     }
 })
 
-$(".menu-link").click(() => {
-    $("#menu").addClass("translate-y-[-600px]").removeClass("translate-y-0")
+/* плавный скролл по якорным ссылкам с учётом шапки (блок - 100px на экранах < 1024px) */
+$('a[href^="#"]').on("click", function(e) {
+    const targetHref = $(this).attr("href")
+    if (targetHref && targetHref.length > 1 && $(targetHref).length) {
+        e.preventDefault()
+        const isBelowLg = window.innerWidth < 1024
+        const offset = isBelowLg ? 100 : 70
+        const targetTop = $(targetHref).offset().top - offset
+
+        $('html, body').stop().animate({
+            scrollTop: targetTop
+        }, 500)
+
+        // закрыть мобильное меню при переходе
+        if (!$("#menu").hasClass("translate-y-[-600px]")) {
+            $("#menu").addClass("translate-y-[-600px]").removeClass("translate-y-0")
+        }
+    }
 })
 
 
@@ -216,7 +232,8 @@ $(".format-card").click(function() {
     if (format) {
         $("#formatSelect").val(format)
     }
-    $('html, body').animate({
-        scrollTop: $('#heroFormCard').offset().top - 80
+    const offset = window.innerWidth < 1024 ? 100 : 80
+    $('html, body').stop().animate({
+        scrollTop: $('#heroFormCard').offset().top - offset
     }, 500)
 })
