@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Studio Table — Организация мероприятий и кейтеринг в Москве</title>
     <link rel="stylesheet" href="Assets/CSS/output.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -19,45 +19,195 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/113844868" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 </head>
-<body class="font-montserrat bg-white">
-    <header class="py-2.5 px-6 lg:px-4 w-full font-instrument bg-white relative">
+<body class="font-montserrat bg-white text-[#1A1A1A]">
+    <!-- Header -->
+    <header class="py-3 px-4 sm:px-6 lg:px-8 w-full font-instrument bg-white sticky top-0 z-40 border-b border-[#1A1A1A]/5">
         <div class="max-w-[1280px] mx-auto flex items-center justify-between">
-            <a href="index.html" class="flex flex-col gap-0.5 items-center text-center">
-                <img src="Assets/Images/header/logo.webp" alt="" class="w-20 md:w-24">
+            <a href="index.html" class="flex flex-col gap-0.5 items-start text-left">
+                <img src="Assets/Images/header/logo.webp" alt="STUDIO TABLE - Catering & Events" class="w-24 sm:w-28 object-contain">
             </a>
-            <a id="orderDesktop" class="cursor-pointer py-2.5 px-5 text-[12px] leading-[100%] font-semibold text-white bg-[#1A1A1A] uppercase rounded-[4px]">Создать мероприятие</a>
+
+            <!-- Actions: 1. Phone handset, 2. WhatsApp, 3. Burger menu -->
+            <div class="flex items-center gap-3 sm:gap-5">
+                <!-- 1. Иконка телефона (телефонной трубки) -->
+                <a href="tel:+7 (926) 879-87-35" class="p-1.5 text-[#1A1A1A] hover:opacity-60 transition-opacity flex items-center justify-center" aria-label="Позвонить">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </a>
+
+                <!-- 2. Иконка WhatsApp -->
+                <a href="https://wa.me/79268798735" target="_blank" rel="noopener noreferrer" class="p-1.5 text-[#1A1A1A] hover:opacity-60 transition-opacity flex items-center justify-center" aria-label="WhatsApp">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
+                        <path d="M9 10a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
+                    </svg>
+                </a>
+
+                <!-- 3. Иконка бургер меню -->
+                <button id="toggler" type="button" class="cursor-pointer p-1.5 text-[#1A1A1A] hover:opacity-60 transition-opacity flex items-center justify-center" aria-label="Меню">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu dropdown -->
+        <div id="menu" class="absolute z-30 left-0 top-full translate-y-[-600px] flex flex-col w-full bg-white py-6 px-6 border-b border-[#1A1A1A]/10 shadow-xl transition-all duration-300 items-center gap-6 text-[14px] font-semibold text-[#1A1A1A] uppercase tracking-wider">
+            <a href="#concept" class="menu-link hover:opacity-70 transition-opacity">Концепция</a>
+            <a href="#cycle" class="menu-link hover:opacity-70 transition-opacity">Процесс</a>
+            <a href="#formats" class="menu-link hover:opacity-70 transition-opacity">Форматы</a>
+            <a href="#contacts" class="menu-link hover:opacity-70 transition-opacity">Контакты</a>
+            <a href="tel:+7 (926) 879-87-35" class="text-[14px] text-[#1A1A1A]/70 normal-case font-normal">+7 (926) 879-87-35</a>
         </div>
     </header>
 
     <main>
-        <section class="w-full relative">
-            <div id="heroOverlay" class="absolute inset-0 flex flex-col items-center justify-center gap-6 text-center z-3">
-                <button id="heroPlayButton" type="button" class="cursor-pointer">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" fill="white" fill-opacity="0.25098"/>
-                        <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white"/>
-                        <path d="M25.2681 23.9983C25.0918 24.3029 24.999 24.6486 24.9991 25.0005V38.9995C24.999 39.3514 25.0918 39.6971 25.2681 40.0017C25.4443 40.3063 25.6978 40.5589 26.003 40.7342C26.3082 40.9095 26.6542 41.0012 27.0062 41C27.3581 40.9988 27.7035 40.9048 28.0075 40.7274L40.009 33.7279C40.3115 33.5517 40.5624 33.2992 40.7367 32.9957C40.9111 32.6921 41.0026 32.3482 41.0023 31.9981C41.002 31.6481 40.9099 31.3043 40.735 31.0011C40.5602 30.6978 40.3088 30.4458 40.006 30.2701L28.0075 23.2726C27.7035 23.0952 27.3581 23.0012 27.0062 23C26.6542 22.9988 26.3082 23.0905 26.003 23.2658C25.6978 23.4411 25.4443 23.6937 25.2681 23.9983Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    </svg>                    
-                </button>
+        <!-- Hero section with Title, Placeholder & Form Card (as in mockup) -->
+        <section class="w-full pt-8 pb-12 sm:pt-12 sm:pb-16 px-4 bg-white overflow-hidden">
+            <div class="max-w-[1080px] mx-auto flex flex-col gap-8 sm:gap-10">
+                <!-- Top: Heading + Subtitle on left, Placeholder image on right -->
+                <div class="relative flex items-center justify-between gap-3 sm:gap-6">
+                    <div class="flex flex-col gap-3 sm:gap-4 max-w-[270px] sm:max-w-[440px] z-1">
+                        <h1 class="font-cormorant text-[32px] sm:text-[46px] lg:text-[54px] leading-[105%] font-normal text-[#1A1A1A] tracking-[-0.01em]">
+                            Организация<br>
+                            мероприятий<br>
+                            в Москве
+                        </h1>
+                        <p class="font-montserrat text-[13px] sm:text-[15px] lg:text-[16px] leading-[145%] text-[#1A1A1A]/70 max-w-[320px] sm:max-w-[380px]">
+                            Авторская кухня, эстетика каждой детали и безупречный сервис.
+                        </p>
+                    </div>
+
+                    <!-- Placeholder for hero image -->
+                    <div class="flex-1 flex justify-end items-center -mr-1 sm:mr-0">
+                        <div class="w-[180px] sm:w-[300px] lg:w-[380px] aspect-4/3 rounded-[20px] bg-[#FBF9F6] border-2 border-dashed border-[#1A1A1A]/15 flex flex-col items-center justify-center gap-2.5 text-[#1A1A1A]/40 p-4 text-center select-none">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                            <span class="text-[11px] sm:text-[13px] font-medium leading-[125%]">Место для фото блюда</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div id="heroFormCard" class="w-full max-w-[560px] mx-auto bg-white border border-[#1A1A1A1A] rounded-[24px] p-6 sm:p-8 shadow-[0px_10px_35px_0px_#00000008]">
+                    <div class="flex flex-col gap-2 text-center mb-6">
+                        <h2 class="font-cormorant text-[26px] sm:text-[32px] leading-[115%] font-normal text-[#1A1A1A]">
+                            Получите персональное<br>предложение
+                        </h2>
+                        <p class="font-montserrat text-[12px] sm:text-[13px] leading-[140%] text-[#1A1A1A]/60 max-w-[340px] mx-auto">
+                            Ответим в течение 30 минут и подготовим решение для вашего события.
+                        </p>
+                    </div>
+
+                    <form id="heroLeadForm" class="flex flex-col gap-4" onsubmit="return false;">
+                        <!-- Формат мероприятия -->
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-[12px] sm:text-[13px] font-semibold text-[#1A1A1A]">Формат мероприятия</label>
+                            <div class="relative flex items-center">
+                                <span class="absolute left-3.5 text-[#1A1A1A]/70 pointer-events-none">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                </span>
+                                <select name="format" id="formatSelect" class="w-full appearance-none pl-11 pr-10 py-3 border border-[#1A1A1A1A] rounded-[10px] bg-white text-[13px] sm:text-[14px] leading-[100%] text-[#1A1A1A] cursor-pointer focus:border-[#1A1A1A] outline-none transition-colors">
+                                    <option value="" disabled selected>Выберите формат</option>
+                                    <option value="Банкет">Банкет</option>
+                                    <option value="Фуршет">Фуршет</option>
+                                    <option value="Коктейль">Коктейль</option>
+                                    <option value="Гала-ужин">Гала-ужин</option>
+                                    <option value="Корпоратив">Корпоратив</option>
+                                    <option value="День рождения">День рождения</option>
+                                    <option value="Свадьба">Свадьба</option>
+                                    <option value="Презентация">Презентация</option>
+                                    <option value="Другое">Другое</option>
+                                </select>
+                                <span class="absolute right-3.5 text-[#1A1A1A]/60 pointer-events-none">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 2 columns: Количество гостей + Уровень сервиса -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                            <!-- Количество гостей -->
+                            <div class="flex flex-col gap-1.5">
+                                <label class="text-[12px] sm:text-[13px] font-semibold text-[#1A1A1A]">Количество гостей</label>
+                                <div class="relative flex items-center">
+                                    <span class="absolute left-3.5 text-[#1A1A1A]/70 pointer-events-none">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="12" cy="7" r="4"/>
+                                        </svg>
+                                    </span>
+                                    <input type="text" name="guests" id="guestsInput" placeholder="Укажите число" class="w-full pl-11 pr-4 py-3 border border-[#1A1A1A1A] rounded-[10px] bg-white text-[13px] sm:text-[14px] leading-[100%] text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 focus:border-[#1A1A1A] outline-none transition-colors">
+                                </div>
+                            </div>
+
+                            <!-- Уровень сервиса -->
+                            <div class="flex flex-col gap-1.5">
+                                <label class="text-[12px] sm:text-[13px] font-semibold text-[#1A1A1A]">Уровень сервиса</label>
+                                <div class="relative flex items-center">
+                                    <span class="absolute left-3.5 text-[#1A1A1A]/70 pointer-events-none">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                            <polyline points="2 17 12 22 22 17"/>
+                                            <polyline points="2 12 12 17 22 12"/>
+                                        </svg>
+                                    </span>
+                                    <select name="service_level" id="serviceSelect" class="w-full appearance-none pl-11 pr-10 py-3 border border-[#1A1A1A1A] rounded-[10px] bg-white text-[13px] sm:text-[14px] leading-[100%] text-[#1A1A1A] cursor-pointer focus:border-[#1A1A1A] outline-none transition-colors">
+                                        <option value="Стандарт" selected>Стандарт</option>
+                                        <option value="Премиум">Премиум</option>
+                                        <option value="VIP / Делюкс">VIP / Делюкс</option>
+                                    </select>
+                                    <span class="absolute right-3.5 text-[#1A1A1A]/60 pointer-events-none">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="button" id="openContactModalBtn" class="cursor-pointer w-full mt-2 py-3.5 px-6 bg-[#1A1A1A] hover:bg-black text-white text-[14px] sm:text-[15px] font-medium rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-sm">
+                            <span>Получить предложение</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <img id="heroPreview" src="Assets/Images/hero/preview.webp" alt="" class="absolute inset-0 z-1 w-full h-full object-cover">
-            <div id="heroDim" class="absolute inset-0 bg-black/40 z-2 transition-opacity duration-300"></div>
-            <video muted loop id="heroVideo" src="Assets/Images/hero/main.mp4" class="w-full cursor-pointer" playsinline preload="metadata"></video>
         </section>
 
-        <section class="w-full py-6 lg:py-[120px] px-4">
+        <!-- Concept statement -->
+        <section id="concept" class="w-full py-8 lg:py-[100px] px-4">
             <div class="w-full max-w-[1280px] mx-auto flex flex-col gap-8">
                 <div class="flex flex-col gap-3 lg:gap-6 items-center text-center">
-                    <p class="text-[32px] lg:text-[56px] leading-[110%] font-semibold text-black max-w-[1061px]">Мы создаём события, которые хочется повторить</p>
+                    <p class="font-cormorant text-[32px] lg:text-[56px] leading-[110%] font-normal text-black max-w-[1061px]">Мы создаём события, которые хочется повторить</p>
                     <p class="text-[16px] lg:text-[20px] leading-[160%] text-black/50">Еда, сервис и атмосфера, продуманные до мелочей</p>
                 </div>
             </div>
         </section>
 
-        <section class="w-full md:py-8 bg-[#FBF9F6] md:px-4">
+        <!-- Cycle / Process (3 steps) -->
+        <section id="cycle" class="w-full md:py-8 bg-[#FBF9F6] md:px-4">
             <div class="w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-8">
                 <div class="flex flex-col bg-[#FBF9F6] md:bg-white lg:border border-[#6B6B6B]/15 md:rounded-[8px] overflow-hidden lg:shadow-[0px_12px_24px_0px_#1A1A1A05]">
-                    <img src="Assets/Images/cycle/1.webp" alt="" class="w-full max-md:order-last aspect-3/2 object-cover">
+                    <img src="Assets/Images/cycle/1.webp" alt="Идея" class="w-full max-md:order-last aspect-3/2 object-cover">
                     <div class="flex flex-col gap-3 lg:gap-4 px-6 py-8 lg:px-8">
                         <div class="flex items-center gap-3 text-[20px] lg:text-[28px] leading-[120%] font-bold">
                             <p>1.</p>
@@ -67,7 +217,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col bg-[#FBF9F6] md:bg-white lg:border border-[#6B6B6B]/15 md:rounded-[8px] overflow-hidden lg:shadow-[0px_12px_24px_0px_#1A1A1A05] max-md:mt-4">
-                    <img src="Assets/Images/cycle/2.webp" alt="" class="w-full max-md:order-last aspect-3/2 object-cover">
+                    <img src="Assets/Images/cycle/2.webp" alt="Презентация" class="w-full max-md:order-last aspect-3/2 object-cover">
                     <div class="flex flex-col gap-3 lg:gap-4 px-6 py-8 lg:px-8">
                         <div class="flex items-center gap-3 text-[20px] lg:text-[28px] leading-[120%] font-bold">
                             <p>2.</p>
@@ -77,7 +227,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col bg-[#FBF9F6] md:bg-white lg:border border-[#6B6B6B]/15 md:rounded-[8px] overflow-hidden lg:shadow-[0px_12px_24px_0px_#1A1A1A05] max-md:mt-4">
-                    <img src="Assets/Images/cycle/3.webp" alt="" class="w-full max-md:order-last aspect-3/2 object-cover">
+                    <img src="Assets/Images/cycle/3.webp" alt="Дегустация" class="w-full max-md:order-last aspect-3/2 object-cover">
                     <div class="flex flex-col gap-3 lg:gap-4 px-6 py-8 lg:px-8">
                         <div class="flex items-center gap-3 text-[20px] lg:text-[28px] leading-[120%] font-bold">
                             <p>3.</p>
@@ -89,402 +239,190 @@
             </div>
         </section>
 
-        <section id="preForm" class="w-full py-6 md:py-20 px-4 bg-white md:bg-[#1A1A1A]">
-            <div class="w-full max-w-[1280px] mx-auto flex max-lg:flex-col gap-6 items-center justify-between">
-                <div class="flex flex-col gap-4 max-md:hidden max-w-[733px] max-lg:text-center">
-                    <p class="text-[34px] lg:text-[44px] leading-[100%] font-light text-white">
-                        Давайте спланируем ваше следующее незабываемое событие вместе
-                    </p>
-                    <p class="text-[16px] leading-[100%] text-white/60">Обсудите детали с нашим координатором и получите индивидуальное предложение.</p>
-                </div>
-                <button id="formToggler" class="cursor-pointer py-4 md:py-5 md:px-8 text-center w-full md:w-fit rounded-[4px] text-[14px] leading-[100%] font-semibold bg-[#1A1A1A] md:text-[#1A1A1A] text-white md:bg-white">
-                    Создать мероприятие
-                </button>
-            </div>
-        </section>
+        <!-- Formats section (Форматы мероприятий - белый блок вместо preForm) -->
+        <section id="formats" class="w-full py-12 sm:py-16 lg:py-20 px-4 bg-white">
+            <div class="max-w-[1180px] mx-auto flex flex-col gap-10 sm:gap-14 items-center">
+                <h2 class="font-cormorant text-[30px] sm:text-[38px] lg:text-[44px] leading-[115%] font-normal text-[#1A1A1A] text-center">
+                    Форматы мероприятий
+                </h2>
 
-        <section id="formSection" class="w-full pb-6 lg:py-[120px] px-4 hidden">
-            <div class="p-8 bg-white shadow-[0px_10px_30px_0px_#0000000D] w-full max-w-[800px] mx-auto rounded-[12px]">
-                <div id="tabs" class="flex flex-col gap-8">
-                    <ul class="flex items-center justify-center gap-2 md:gap-3 text-[12px] leading-[100%] font-semibold text-[#1A1A1A99]">
-                        <li>                            
-                            <a href="#tab1" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>1</span>
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#tab2" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>2</span>
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#tab3" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>3</span>
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#tab4" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>4</span>
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#tab5" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>5</span>
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#tab6" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>6</span>
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#tab7" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>7</span>
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#tab8" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>8</span>
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#tab9" class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full border border-[#1A1A1A1A] bg-white">
-                                <span>9</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div id="tab1" class="flex flex-col gap-4 text-center">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Сколько гостей планируете?</p>
-                        <p class="text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A]/60">Это поможет нам предложить идеальные решения для вашего события.</p>
-                        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-[14px] leading-[100%] font-medium text-[#1A1A1A]">
-                            <label class="flex">
-                                <input type="radio" name="guests" class="sr-only peer" value="до 20">
-                                <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">до 20</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="guests" class="sr-only peer" value="20 – 50">
-                                <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">20 – 50</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="guests" class="sr-only peer" value="50 – 100" checked>
-                                <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">50 – 100</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="guests" class="sr-only peer" value="более 100">
-                                <span class="w-full py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">более 100</span>
-                            </label>
+                <div class="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-6 lg:gap-0 lg:divide-x divide-[#1A1A1A]/10 items-stretch">
+                    <!-- 1. Корпоративные мероприятия -->
+                    <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Корпоратив">
+                        <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="5" r="1.5"/>
+                                <path d="M4 18a8 8 0 0 1 16 0"/>
+                                <line x1="2" y1="18" x2="22" y2="18"/>
+                            </svg>
                         </div>
+                        <p class="font-montserrat text-[13px] sm:text-[14px] leading-[135%] font-medium text-[#1A1A1A]">
+                            Корпоративные<br>мероприятия
+                        </p>
                     </div>
-                    <div id="tab2" class="flex flex-col gap-8">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Какой формат мероприятия?</p>
-                        <div class="flex items-center gap-3 flex-wrap text-[14px] leading-[100%] font-medium text-[#1A1A1A] w-full">
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Завтрак">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Завтрак</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Бранч">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Бранч</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Обед">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Обед</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Коктейль" checked>
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Коктейль</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Ужин">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Ужин</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Корпоратив">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Корпоратив</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Презентация">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Презентация</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="День рождения">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">День рождения</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Свадьба">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Свадьба</span>
-                            </label>
-                            <label class="flex">
-                                <input type="radio" name="format" class="sr-only peer" value="Другое">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Другое</span>
-                            </label>
+
+                    <!-- 2. Фуршеты и коктейли -->
+                    <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Фуршет">
+                        <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 3l1.5 7a1.8 1.8 0 0 0 1.8 1.4h.2"/>
+                                <path d="M11 3.5l-.8 6.5"/>
+                                <line x1="10" y1="11.5" x2="8.5" y2="19"/>
+                                <line x1="6" y1="19" x2="10.5" y2="19"/>
+                                <path d="M17 3l-1.5 7a1.8 1.8 0 0 1-1.8 1.4h-.2"/>
+                                <path d="M13 3.5l.8 6.5"/>
+                                <line x1="14" y1="11.5" x2="15.5" y2="19"/>
+                                <line x1="13.5" y1="19" x2="18" y2="19"/>
+                            </svg>
                         </div>
+                        <p class="font-montserrat text-[13px] sm:text-[14px] leading-[135%] font-medium text-[#1A1A1A]">
+                            Фуршеты<br>и коктейли
+                        </p>
                     </div>
-                    <div id="tab3" class="flex flex-col gap-8">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Выберите атмосферу мероприятия</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                            <label class="flex last:col-span-full cursor-pointer">
-                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Breakfast">
-                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
-                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Breakfast</p>
-                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Спокойное утро, хороший кофе, свежая выпечка, натуральные продукты и лёгкое начало дня.</p>
-                                </div>
-                            </label>
-                            <label class="flex last:col-span-full cursor-pointer">
-                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Summer">
-                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
-                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Summer</p>
-                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Яркие цвета, сезонные продукты, лёгкость и летнее настроение.</p>
-                                </div>
-                            </label>
-                            <label class="flex last:col-span-full cursor-pointer">
-                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Business" checked>
-                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
-                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Business</p>
-                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Современная деловая атмосфера, лаконичная подача, безупречный сервис и внимание к деталям.</p>
-                                </div>
-                            </label>
-                            <label class="flex last:col-span-full cursor-pointer">
-                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Executive">
-                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
-                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Executive</p>
-                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Премиальная сервировка, изысканное меню и сервис для самых важных встреч.</p>
-                                </div>
-                            </label>
-                            <label class="flex last:col-span-full cursor-pointer">
-                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Cocktail">
-                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
-                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Cocktail</p>
-                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Небольшие авторские блюда, красивые коктейли, живая атмосфера общения и лёгкий формат мероприятия.</p>
-                                </div>
-                            </label>
-                            <label class="flex last:col-span-full cursor-pointer">
-                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Celebration">
-                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
-                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Celebration</p>
-                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Праздничная атмосфера, эффектная подача, яркие эмоции и ощущение настоящего события.</p>
-                                </div>
-                            </label>
-                            <label class="flex last:col-span-full cursor-pointer">
-                                <input type="radio" name="atmosphere" class="sr-only peer" value="Studio Signature">
-                                <div class="flex flex-col gap-2 p-5 rounded-[8px] border border-[#1A1A1A1A] w-full transition-all duration-300  peer-checked:border-[#1A1A1A]">
-                                    <p class="text-[16px] leading-[100%] font-bold text-[#1A1A1A]">Studio Signature</p>
-                                    <p class="text-[13px] lg:text-[14px] leading-[100%] text-[#1A1A1A]/60">Индивидуальная концепция, созданная специально под ваше мероприятие без готовых шаблонов.</p>
-                                </div>
-                            </label>
+
+                    <!-- 3. Свадьбы -->
+                    <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Свадьба">
+                        <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="13.5" r="5"/>
+                                <circle cx="15" cy="13.5" r="5"/>
+                                <path d="M12 2.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6z" fill="currentColor"/>
+                            </svg>
                         </div>
+                        <p class="font-montserrat text-[13px] sm:text-[14px] leading-[135%] font-medium text-[#1A1A1A]">
+                            Свадьбы
+                        </p>
                     </div>
-                    <div id="tab4" class="flex flex-col gap-8">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Нужны ли дополнительные услуги?</p>
-                        <div class="flex items-center gap-3 flex-wrap text-[14px] leading-[100%] font-medium text-[#1A1A1A] w-full">
-                            <label class="flex">
-                                <input type="checkbox" name="services" class="sr-only peer" value="Декор" checked>
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Декор</span>
-                            </label>
-                            <label class="flex">
-                                <input type="checkbox" name="services" class="sr-only peer" value="Флористика" checked>
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Флористика</span>
-                            </label>
-                            <label class="flex">
-                                <input type="checkbox" name="services" class="sr-only peer" value="Фотограф">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Фотограф</span>
-                            </label>
-                            <label class="flex">
-                                <input type="checkbox" name="services" class="sr-only peer" value="Музыка">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Музыка</span>
-                            </label>
-                            <label class="flex">
-                                <input type="checkbox" name="services" class="sr-only peer" value="Ведущий">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Ведущий</span>
-                            </label>
-                            <label class="flex">
-                                <input type="checkbox" name="services" class="sr-only peer" value="Бармен-шоу">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Бармен-шоу</span>
-                            </label>
-                            <label class="flex">
-                                <input type="checkbox" name="services" class="sr-only peer" value="Нет, только кейтеринг">
-                                <span class="w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Нет, только кейтеринг</span>
-                            </label>
+
+                    <!-- 4. Частные ужины -->
+                    <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Банкет">
+                        <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="6" r="1.5"/>
+                                <path d="M5 17a7 7 0 0 1 14 0"/>
+                                <path d="M8 14a4 4 0 0 1 5-2.5"/>
+                                <line x1="3" y1="17" x2="21" y2="17"/>
+                                <line x1="5" y1="19.5" x2="19" y2="19.5"/>
+                            </svg>
                         </div>
+                        <p class="font-montserrat text-[13px] sm:text-[14px] leading-[135%] font-medium text-[#1A1A1A]">
+                            Частные<br>ужины
+                        </p>
                     </div>
-                    <div id="tab5" class="flex flex-col gap-8">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Какой бюджет вы планируете?</p>
-                        <div class="flex items-center gap-3 flex-wrap text-[14px] leading-[100%] font-medium text-[#1A1A1A] w-full">
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="budget" class="sr-only peer" value="До 200 000 ₽">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">До 200 000 ₽</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="budget" class="sr-only peer" value="200–500 тыс." checked>
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">200–500 тыс.</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="budget" class="sr-only peer" value="500 тыс.–1 млн">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">500 тыс.–1 млн</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="budget" class="sr-only peer" value="Более 1 млн">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Более 1 млн</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="budget" class="sr-only peer" value="Пока не определились">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Пока не определились</span>
-                            </label>
+
+                    <!-- 5. Деловые встречи -->
+                    <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group col-span-2 sm:col-span-1" data-format="Презентация">
+                        <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="7" width="18" height="13" rx="2.5"/>
+                                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                <line x1="3" y1="13" x2="21" y2="13"/>
+                                <rect x="10.5" y="12" width="3" height="2" rx=".5" fill="currentColor"/>
+                            </svg>
                         </div>
-                    </div>
-                    <div id="tab6" class="flex flex-col gap-8">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Когда мероприятие?</p>
-                        <div class="flex items-center gap-3 flex-wrap text-[14px] leading-[100%] font-medium text-[#1A1A1A] w-full">
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="date" class="sr-only peer" value="На этой неделе">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">На этой неделе</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="date" class="sr-only peer" value="В течение месяца" checked>
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">В течение месяца</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="date" class="sr-only peer" value="Через несколько месяцев">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Через несколько месяцев</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="date" class="sr-only peer" value="Пока выбираем дату">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Пока выбираем дату</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div id="tab7" class="flex flex-col gap-8">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Где пройдёт мероприятие?</p>
-                        <div class="flex items-center gap-3 flex-wrap text-[14px] leading-[100%] font-medium text-[#1A1A1A] w-full">
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="place" class="sr-only peer" value="Офис">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Офис</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="place" class="sr-only peer" value="Лофт" checked>
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Лофт</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="place" class="sr-only peer" value="Частный дом">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Частный дом</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="place" class="sr-only peer" value="Ресторан">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Ресторан</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="place" class="sr-only peer" value="Открытая площадка">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Открытая площадка</span>
-                            </label>
-                            <label class="flex max-md:w-full">
-                                <input type="radio" name="place" class="sr-only peer" value="Помогите подобрать площадку">
-                                <span class="w-full max-md:text-center md:w-fit px-5 py-3 rounded-[4px] border border-[#1A1A1A1A] peer-checked:bg-[#1A1A1A] peer-checked:text-white transition-all duration-300 cursor-pointer">Помогите подобрать площадку</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div id="tab8" class="flex flex-col gap-8">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Есть ли пожелания?</p>
-                        <textarea name="wishes" placeholder="Например: без мяса, больше морепродуктов, открытая кухня, винный бар и т.д." class="h-[140px] lg:h-40 p-5 border border-[#1A1A1A1A] rounded-[8px] text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A] placeholder:text-[#1A1A1A]/60"></textarea>
-                    </div>
-                    <div id="tab9" class="flex flex-col gap-8">
-                        <p class="text-[28px] lg:text-[32px] leading-[100%] text-[#1A1A1A]">Контактные данные</p>
-                        <div class="flex flex-col gap-4">
-                            <div>
-                                <div class="relative w-full">
-                                    <input type="text" name="user_name" autocomplete="name" placeholder=" " class="w-full pt-6 pb-2 px-5 border border-[#1A1A1A1A] rounded-[8px] text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A] peer transition-colors focus:border-[#1A1A1A] outline-none"/>
-                                    <p class="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 transition-all duration-300 text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A]/60 peer-focus:text-[11px] peer-focus:top-2.5 peer-not-placeholder-shown:text-[11px] peer-not-placeholder-shown:top-2.5">Ваше имя *</p>
-                                </div>
-                                <p id="nameError" class="hidden text-[12px] text-red-500 mt-1 pl-1">Пожалуйста, укажите ваше имя</p>
-                            </div>
-                            <div>
-                                <div class="relative w-full">
-                                    <input type="tel" name="user_phone" autocomplete="tel" placeholder=" " class="w-full pt-6 pb-2 px-5 border border-[#1A1A1A1A] rounded-[8px] text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A] peer transition-colors focus:border-[#1A1A1A] outline-none"/>
-                                    <p class="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 transition-all duration-300 text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A]/60 peer-focus:text-[11px] peer-focus:top-2.5 peer-not-placeholder-shown:text-[11px] peer-not-placeholder-shown:top-2.5">Телефон *</p>
-                                </div>
-                                <p id="phoneError" class="hidden text-[12px] text-red-500 mt-1 pl-1">Пожалуйста, укажите номер телефона (11 цифр)</p>
-                            </div>
-                            <div>
-                                <div class="relative w-full">
-                                    <input type="email" name="user_email" autocomplete="email" placeholder=" " class="w-full pt-6 pb-2 px-5 border border-[#1A1A1A1A] rounded-[8px] text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A] peer transition-colors focus:border-[#1A1A1A] outline-none"/>
-                                    <p class="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 transition-all duration-300 text-[14px] lg:text-[15px] leading-[100%] text-[#1A1A1A]/60 peer-focus:text-[11px] peer-focus:top-2.5 peer-not-placeholder-shown:text-[11px] peer-not-placeholder-shown:top-2.5">Email</p>
-                                </div>
-                                <p id="emailError" class="hidden text-[12px] text-red-500 mt-1 pl-1">Пожалуйста, введите корректный адрес email</p>
-                            </div>
-                        </div>
-                        <div id="formSubmitError" class="hidden p-4 rounded-[8px] bg-red-50 border border-red-200 text-red-600 text-[13px] leading-[140%] text-center"></div>
-                    </div>
-                    <div class="flex items-center justify-between text-[14px] leading-[100%] font-semibold uppercase">
-                        <button id="tabPrevButton" class="cursor-pointer py-4 px-6 bg-white border border-[#1A1A1A] rounded-[4px]">Назад</button>
-                        <button id="tabNextButton" class="cursor-pointer py-4 px-6 text-white bg-[#1A1A1A] rounded-[4px]">Далее →</button>
-                        <button id="endButton" class="cursor-pointer py-4 px-6 text-white bg-[#1A1A1A] rounded-[4px] hidden">Завершить</button>
-                    </div>
-                </div>
-                <div id="finalPage" class="hidden">
-                    <div class="flex flex-col gap-8 items-center">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="64" height="64" rx="32" fill="#F5F0EB"/>
-                            <path d="M23.733 31.0664L18.666 45.3343L32.9335 40.2805M21.3328 19.999H21.3462M45.3343 26.6662H45.3476M36.0004 18.6655H36.0137M45.3343 42.6677H45.3476M45.3343 18.6655L42.3474 19.6656C41.4972 19.9488 40.7718 20.5185 40.2951 21.2774C39.8184 22.0362 39.62 22.9371 39.7339 23.826C39.8673 24.9728 38.9739 25.9995 37.8005 25.9995H37.2938C36.1471 25.9995 35.1603 26.7996 34.947 27.9197L34.667 29.3332M45.3343 33.3334L44.2409 32.8934C43.0941 32.44 41.8141 33.1601 41.6007 34.3735C41.4541 35.3069 40.6407 36.0003 39.6939 36.0003H38.6672M30.6667 18.6655L31.1068 19.759C31.5601 20.9057 30.8401 22.1858 29.6267 22.3992C28.6933 22.5325 27.9999 23.3593 27.9999 24.306V25.3328M30.6661 33.3329C33.2396 35.9064 34.4397 38.8934 33.3329 40.0001C32.2262 41.1069 29.2394 39.9068 26.6659 37.3332C24.0924 34.7597 22.8923 31.7727 23.999 30.666C25.1058 29.5592 28.0926 30.7593 30.6661 33.3329Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                        
-                        <div class="flex flex-col gap-4 text-center">
-                            <p class="text-[40px] lg:text-[48px] leading-[100%] font-bold text-[#1A1A1A]">Спасибо!</p>
-                            <p class="text-[16px] lg:text-[18px] leading-[100%] text-[#1A1A1A]/60">Мы уже начинаем готовить вашу концепцию.</p>
-                        </div>
-                        <div class="w-full flex flex-col gap-5 lg:gap-8 p-6 lg:p-8 rounded-[12px] bg-[#F5F0EB]">
-                            <p class="text-[18px] lg:text-[20px] leading-[100%] font-semibold text-[#1A1A1A]">Что вы получите:</p>
-                            <div class="flex flex-col gap-3 lg:gap-4 text-[14px] lg:text-[16px] text-[#1A1A1A]">
-                                <div class="flex items-center gap-3">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    <p>Персональную концепцию мероприятия</p>                                    
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    <p>Подбор меню</p>                                    
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    <p>Визуальную презентацию</p>                                    
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    <p>Расчёт стоимости</p>                                    
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.666 5L7.50023 14.166L3.33398 9.99964" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    <p>Studio Box для дегустации (при необходимости)</p>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <button id="resetFormButton" type="button" class="cursor-pointer py-3.5 px-8 text-[14px] leading-[100%] font-semibold text-[#1A1A1A] border border-[#1A1A1A] rounded-[4px] hover:bg-[#1A1A1A] hover:text-white transition-all duration-300">
-                            Заполнить новую заявку
-                        </button>
+                        <p class="font-montserrat text-[13px] sm:text-[14px] leading-[135%] font-medium text-[#1A1A1A]">
+                            Деловые<br>встречи
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-16 px-6 lg:px-4 w-full font-instrument bg-[#1A1A1A] md:bg-[#111111]">
+    <!-- Modal for Contacts & Submission -->
+    <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative w-full max-w-[480px] bg-white rounded-[24px] p-6 sm:p-8 shadow-2xl transition-all duration-300 transform scale-95" id="modalCard">
+            <button type="button" id="closeContactModal" class="cursor-pointer absolute right-4 top-4 p-2 text-[#1A1A1A]/40 hover:text-[#1A1A1A] transition-colors" aria-label="Закрыть">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+
+            <!-- Modal Form State -->
+            <div id="modalFormContent" class="flex flex-col gap-6">
+                <div class="flex flex-col gap-2 text-center">
+                    <p class="font-cormorant text-[28px] sm:text-[32px] leading-[115%] font-normal text-[#1A1A1A]">
+                        Куда отправить предложение?
+                    </p>
+                    <p class="text-[13px] leading-[140%] text-[#1A1A1A]/60">
+                        Укажите контактные данные — мы свяжемся с вами в течение 30 минут с готовым решением.
+                    </p>
+                </div>
+
+                <!-- Parameters badge -->
+                <div id="modalSummaryBadge" class="py-2.5 px-4 rounded-[10px] bg-[#FBF9F6] border border-[#1A1A1A1A] text-[12px] sm:text-[13px] text-[#1A1A1A] text-center font-medium"></div>
+
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <div class="relative w-full">
+                            <input type="text" name="user_name" autocomplete="name" placeholder=" " class="w-full pt-6 pb-2 px-4 border border-[#1A1A1A1A] rounded-[8px] text-[14px] leading-[100%] text-[#1A1A1A] peer transition-colors focus:border-[#1A1A1A] outline-none"/>
+                            <p class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 transition-all duration-300 text-[14px] leading-[100%] text-[#1A1A1A]/60 peer-focus:text-[11px] peer-focus:top-2.5 peer-not-placeholder-shown:text-[11px] peer-not-placeholder-shown:top-2.5">Ваше имя *</p>
+                        </div>
+                        <p id="nameError" class="hidden text-[12px] text-red-500 mt-1 pl-1">Пожалуйста, укажите ваше имя</p>
+                    </div>
+
+                    <div>
+                        <div class="relative w-full">
+                            <input type="tel" name="user_phone" autocomplete="tel" placeholder=" " class="w-full pt-6 pb-2 px-4 border border-[#1A1A1A1A] rounded-[8px] text-[14px] leading-[100%] text-[#1A1A1A] peer transition-colors focus:border-[#1A1A1A] outline-none"/>
+                            <p class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 transition-all duration-300 text-[14px] leading-[100%] text-[#1A1A1A]/60 peer-focus:text-[11px] peer-focus:top-2.5 peer-not-placeholder-shown:text-[11px] peer-not-placeholder-shown:top-2.5">Телефон *</p>
+                        </div>
+                        <p id="phoneError" class="hidden text-[12px] text-red-500 mt-1 pl-1">Пожалуйста, укажите номер телефона (11 цифр)</p>
+                    </div>
+
+                    <div>
+                        <div class="relative w-full">
+                            <input type="email" name="user_email" autocomplete="email" placeholder=" " class="w-full pt-6 pb-2 px-4 border border-[#1A1A1A1A] rounded-[8px] text-[14px] leading-[100%] text-[#1A1A1A] peer transition-colors focus:border-[#1A1A1A] outline-none"/>
+                            <p class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 transition-all duration-300 text-[14px] leading-[100%] text-[#1A1A1A]/60 peer-focus:text-[11px] peer-focus:top-2.5 peer-not-placeholder-shown:text-[11px] peer-not-placeholder-shown:top-2.5">Email (необязательно)</p>
+                        </div>
+                        <p id="emailError" class="hidden text-[12px] text-red-500 mt-1 pl-1">Пожалуйста, введите корректный адрес email</p>
+                    </div>
+                </div>
+
+                <div id="formSubmitError" class="hidden p-3.5 rounded-[8px] bg-red-50 border border-red-200 text-red-600 text-[13px] leading-[140%] text-center"></div>
+
+                <button type="button" id="submitProposalBtn" class="cursor-pointer w-full py-4 px-6 bg-[#1A1A1A] hover:bg-black text-white text-[15px] font-medium rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-sm">
+                    <span>Отправить заявку</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Modal Success State -->
+            <div id="modalSuccessContent" class="hidden flex flex-col gap-6 items-center text-center py-4">
+                <div class="w-16 h-16 rounded-full bg-[#F5F0EB] flex items-center justify-center">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="font-cormorant text-[32px] sm:text-[38px] leading-[110%] font-normal text-[#1A1A1A]">Спасибо!</p>
+                    <p class="text-[14px] sm:text-[15px] leading-[150%] text-[#1A1A1A]/70 max-w-[340px]">
+                        Мы уже начали готовить ваше персональное предложение и свяжемся с вами в течение 30 минут.
+                    </p>
+                </div>
+                <button type="button" id="closeSuccessBtn" class="cursor-pointer py-3 px-8 text-[14px] font-semibold text-[#1A1A1A] border border-[#1A1A1A] rounded-full hover:bg-[#1A1A1A] hover:text-white transition-all duration-300">
+                    Отлично
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contacts" class="py-16 px-6 lg:px-4 w-full font-instrument bg-[#1A1A1A] md:bg-[#111111]">
         <div class="flex flex-col gap-8 max-w-[1280px] mx-auto">
             <div class="flex max-md:flex-col gap-10 md:justify-between">
                 <div class="flex flex-col gap-4">
-                    <p class="text-[20px] leading-[100%] font-bold text-white">STUDIO TABLE</p>
+                    <p class="font-cormorant text-[22px] leading-[100%] font-normal text-white tracking-wider">STUDIO TABLE</p>
                     <p class="text-[14px] lg:text-[15px] leading-[160%] text-white/60 md:max-w-[405px]">Премиальный кейтеринг и организация частных событий для тех, кто ценит чистоту вкуса, изысканный стиль и безупречный сервис.</p>
                 </div>
                 <div class="flex gap-12 max-md:justify-between">
                     <div class="flex flex-col gap-4 text-[14px] lg:text-[16px] leading-[100%] text-white">
                         <p class="text-[12px] font-bold uppercase text-white/40">Контакты</p>
-                        <a href="tel:+7 (926) 879-87-35">+7 (926) 879-87-35</a>
-                        <a href="mailto:hello@studiotable.ru">hello@studiotable.ru</a>
+                        <a href="tel:+7 (926) 879-87-35" class="hover:text-white/80 transition-colors">+7 (926) 879-87-35</a>
+                        <a href="mailto:hello@studiotable.ru" class="hover:text-white/80 transition-colors">hello@studiotable.ru</a>
                         <p class="text-white/50">Москва, ул. Садовая, 12</p>
                     </div>
                 </div>
@@ -493,15 +431,14 @@
             <div class="flex items-center justify-between text-[12px] lg:text-[14px] leading-[100%] text-white/40">
                 <p>© 2026 Studio Table. All rights reserved.</p>
                 <div class="flex items-center gap-6 max-md:justify-between">
-                    <a href="#" target="_blank">Privacy Policy</a>
-                    <a href="#" target="_blank">Terms of Service</a>
+                    <a href="#" target="_blank" class="hover:text-white/70 transition-colors">Privacy Policy</a>
+                    <a href="#" target="_blank" class="hover:text-white/70 transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
     <script src="Assets/JS/main.js"></script>
 </body>
 </html>

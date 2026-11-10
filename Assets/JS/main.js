@@ -1,101 +1,15 @@
 /* mobile menu */
 $("#toggler").click(() => {
-    $("#menu").toggleClass("max-lg:top-0 max-lg:top-full max-lg:translate-y-[-600px]")
-})
-
-
-/* hero video */
-const heroVideo = $("#heroVideo")[0]
-
-if (heroVideo) {
-    const playHeroVideo = () => {
-        $("#heroPreview, #heroOverlay, #heroDim").addClass("hidden")
-        heroVideo.play().catch((err) => console.warn("Video playback prevented:", err))
-    }
-
-    const pauseHeroVideo = () => {
-        heroVideo.pause()
-        $("#heroOverlay, #heroDim").removeClass("hidden")
-    }
-
-    $("#heroPlayButton").click(() => {
-        playHeroVideo()
-    })
-
-    $("#heroVideo").click(() => {
-        if (heroVideo.paused) {
-            playHeroVideo()
-        } else {
-            pauseHeroVideo()
-        }
-    })
-
-    heroVideo.addEventListener("ended", () => {
-        pauseHeroVideo()
-    })
-}
-
-
-/* tabs */
-$("#tabs").tabs()
-
-let totalTabs = $("#tabs").find(".ui-tabs-panel").length // общее количество вкладок
-let lastIndex = totalTabs - 1 // последняя вкладка
-
-// Обновление состояния кнопок навигации (Назад / Далее / Завершить)
-const updateNavButtons = () => {
-    const activeIndex = $("#tabs").tabs("option", "active")
-
-    // Кнопка «Назад»: скрывать на первом шаге
-    if (activeIndex === 0) {
-        $("#tabPrevButton").addClass("invisible pointer-events-none")
+    const isHidden = $("#menu").hasClass("translate-y-[-600px]")
+    if (isHidden) {
+        $("#menu").removeClass("translate-y-[-600px]").addClass("translate-y-0")
     } else {
-        $("#tabPrevButton").removeClass("invisible pointer-events-none")
-    }
-
-    // Кнопки «Далее» и «Завершить»
-    if (activeIndex === lastIndex) {
-        $("#endButton").removeClass("hidden")
-        $("#tabNextButton").addClass("hidden")
-    } else {
-        $("#tabNextButton").removeClass("hidden")
-        $("#endButton").addClass("hidden")
-    }
-}
-
-$("#tabNextButton").click(function() {
-    const activeIndex = $("#tabs").tabs("option", "active")
-    if (activeIndex < lastIndex) {
-        $("#tabs").tabs("option", "active", activeIndex + 1)
+        $("#menu").addClass("translate-y-[-600px]").removeClass("translate-y-0")
     }
 })
 
-$("#tabPrevButton").click(function() {
-    const activeIndex = $("#tabs").tabs("option", "active")
-    if (activeIndex > 0) {
-        $("#tabs").tabs("option", "active", activeIndex - 1)
-    }
-})
-
-$("#tabs").on("tabsactivate", function(event, ui) {
-    updateNavButtons()
-})
-updateNavButtons()
-
-
-/* services: исключающая логика для "Нет, только кейтеринг" */
-const ONLY_CATERING_VAL = "Нет, только кейтеринг"
-
-$('input[name="services"]').on("change", function() {
-    if ($(this).val() === ONLY_CATERING_VAL) {
-        if ($(this).is(":checked")) {
-            $('input[name="services"]').not(this).prop("checked", false)
-        }
-    } else {
-        if ($(this).is(":checked")) {
-            $(`input[name="services"][value="${ONLY_CATERING_VAL}"]`).prop("checked", false)
-        }
-    }
+$(".menu-link").click(() => {
+    $("#menu").addClass("translate-y-[-600px]").removeClass("translate-y-0")
 })
 
 
@@ -180,11 +94,51 @@ const validateField = (field) => {
 $('input[name="user_name"]').on("input", () => validateField("name"))
 $('input[name="user_email"]').on("input", () => validateField("email"))
 
-// Отправка по Enter в полях ввода контактов
-$('input[name="user_name"], input[name="user_phone"], input[name="user_email"]').on("keydown", function(e) {
-    if (e.key === "Enter") {
-        e.preventDefault()
-        $("#endButton").click()
+
+/* модальное окно с контактами */
+const openContactModal = () => {
+    const format = $('select[name="format"]').val() || "Формат не выбран"
+    const guests = $('input[name="guests"]').val().trim() || "Количество гостей не указано"
+    const service = $('select[name="service_level"]').val() || "Стандарт"
+
+    const summaryParts = []
+    if (format && format !== "Формат не выбран") summaryParts.push(format)
+    if (guests && guests !== "Количество гостей не указано") {
+        summaryParts.push(guests.includes("гост") ? guests : `${guests} гостей`)
+    }
+    summaryParts.push(`Сервис: ${service}`)
+
+    $("#modalSummaryBadge").text(summaryParts.join(" · "))
+    $("#modalFormContent").removeClass("hidden")
+    $("#modalSuccessContent").addClass("hidden")
+    $("#formSubmitError").addClass("hidden").text("")
+
+    $("#contactModal").removeClass("opacity-0 pointer-events-none")
+    $("#modalCard").removeClass("scale-95").addClass("scale-100")
+}
+
+const closeContactModal = () => {
+    $("#contactModal").addClass("opacity-0 pointer-events-none")
+    $("#modalCard").removeClass("scale-100").addClass("scale-95")
+}
+
+$("#openContactModalBtn").click(() => {
+    openContactModal()
+})
+
+$("#closeContactModal, #closeSuccessBtn").click(() => {
+    closeContactModal()
+})
+
+$("#contactModal").click(function(e) {
+    if (e.target === this) {
+        closeContactModal()
+    }
+})
+
+$(document).keydown((e) => {
+    if (e.key === "Escape") {
+        closeContactModal()
     }
 })
 
@@ -194,17 +148,10 @@ const GATEWAY_ENDPOINT = "https://agw.studiotable.ru/api/notifications/v1/delive
 const NOTIFICATION_UID = "studiotable_request"
 
 const collectFormData = () => {
-    const checked = (name) => $(`input[name="${name}"]:checked`).val() || ""
-    const services = $('input[name="services"]:checked').map((_, el) => el.value).get().join(", ")
     return {
-        guests: checked("guests"),
-        format: checked("format"),
-        atmosphere: checked("atmosphere"),
-        services: services,
-        budget: checked("budget"),
-        date: checked("date"),
-        place: checked("place"),
-        wishes: $('textarea[name="wishes"]').val().trim(),
+        format: $('select[name="format"]').val() || "Не указан",
+        guests: $('input[name="guests"]').val().trim() || "Не указано",
+        service_level: $('select[name="service_level"]').val() || "Стандарт",
         name: $('input[name="user_name"]').val().trim(),
         phone: $('input[name="user_phone"]').val().trim(),
         email: $('input[name="user_email"]').val().trim()
@@ -213,7 +160,7 @@ const collectFormData = () => {
 
 
 /* отправка формы */
-$("#endButton").click(async function() {
+$("#submitProposalBtn").click(async function() {
     $("#formSubmitError").addClass("hidden").text("")
 
     const isValid = validateField()
@@ -222,7 +169,7 @@ $("#endButton").click(async function() {
     }
 
     const $button = $(this)
-    const originalText = $button.text()
+    const originalText = $button.html()
     $button.prop("disabled", true).addClass("opacity-70 cursor-not-allowed").text("Отправка...")
 
     try {
@@ -241,55 +188,35 @@ $("#endButton").click(async function() {
             throw new Error(result.message || "Не удалось отправить заявку")
         }
 
-        // Успешный результат: показываем финальную страницу
-        $("#tabs").addClass("hidden")
-        $("#finalPage").removeClass("hidden")
-        $('html, body').animate({
-            scrollTop: $('#formSection').offset().top
-        }, 300)
+        // Успешный результат: показываем финальную плашку в модалке
+        $("#modalFormContent").addClass("hidden")
+        $("#modalSuccessContent").removeClass("hidden")
     } catch (err) {
         console.error("Не удалось отправить заявку:", err)
         $("#formSubmitError")
             .removeClass("hidden")
             .text("Не удалось отправить заявку. Пожалуйста, проверьте подключение к интернету или попробуйте снова.")
     } finally {
-        $button.prop("disabled", false).removeClass("opacity-70 cursor-not-allowed").text(originalText)
+        $button.prop("disabled", false).removeClass("opacity-70 cursor-not-allowed").html(originalText)
+    }
+})
+
+// Отправка по Enter в модальных полях
+$('input[name="user_name"], input[name="user_phone"], input[name="user_email"]').on("keydown", function(e) {
+    if (e.key === "Enter") {
+        e.preventDefault()
+        $("#submitProposalBtn").click()
     }
 })
 
 
-/* сброс формы и заполнение заново */
-const resetForm = () => {
-    $('input[name="user_name"], input[name="user_phone"], input[name="user_email"]').val("").removeClass("input-error")
-    $('textarea[name="wishes"]').val("")
-    $("#nameError, #phoneError, #emailError, #formSubmitError").addClass("hidden").text("")
-
-    $("#finalPage").addClass("hidden")
-    $("#tabs").removeClass("hidden")
-    $("#tabs").tabs("option", "active", 0)
-    updateNavButtons()
-}
-
-$(document).on("click", "#resetFormButton", () => {
-    resetForm()
-})
-
-
-/* переключатели формы (кнопки «Создать мероприятие») */
-$("#formToggler, #orderMobile, #orderDesktop").click(() => {
-    $("#formSection").show(500)
-    if (!$("#finalPage").hasClass("hidden")) {
-        resetForm()
+/* выбор формата в блоке форматов с плавным скроллом к форме */
+$(".format-card").click(function() {
+    const format = $(this).data("format")
+    if (format) {
+        $("#formatSelect").val(format)
     }
-})
-
-$("#orderMobile, #orderDesktop").click(() => {
     $('html, body').animate({
-        scrollTop: $('#formSection').offset().top
+        scrollTop: $('#heroFormCard').offset().top - 80
     }, 500)
-})
-
-$("#orderMobile").click(() => {
-    $("#menu").addClass("max-lg:top-0 max-lg:translate-y-[-600px]")
-    $("#menu").removeClass("max-lg:top-full")
 })
