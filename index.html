@@ -93,10 +93,10 @@
 
                     <div class="shrink-0 flex justify-end items-center">
                         <div id="slider1x1" class="relative w-[180px] sm:w-[320px] md:w-[400px] lg:w-[480px] aspect-square rounded-[20px] sm:rounded-[28px] overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.08)] select-none">
-                            <img src="Assets/Images/slider/1x1/slide-1.png" alt="Слайд 1" class="slider-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
-                            <img src="Assets/Images/slider/1x1/slide-2.png" alt="Слайд 2" class="slider-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none">
-                            <img src="Assets/Images/slider/1x1/slide-3.png" alt="Слайд 3" class="slider-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none">
-                            <img src="Assets/Images/slider/1x1/slide-4.png" alt="Слайд 4" class="slider-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none">
+                            <img src="Assets/Images/slider/1x1/slide-1.png" alt="Слайд 1" class="hero-slider-slide is-active">
+                            <img src="Assets/Images/slider/1x1/slide-2.png" alt="Слайд 2" class="hero-slider-slide">
+                            <img src="Assets/Images/slider/1x1/slide-3.png" alt="Слайд 3" class="hero-slider-slide">
+                            <img src="Assets/Images/slider/1x1/slide-4.png" alt="Слайд 4" class="hero-slider-slide">
                         </div>
                     </div>
                 </div>
@@ -239,7 +239,7 @@
                     Форматы мероприятий
                 </h2>
 
-                <div class="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-6 lg:gap-0 lg:divide-x divide-[#1A1A1A]/10 items-stretch">
+                <div class="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-6 lg:gap-0 lg:divide-x divide-[#1A1A1A]/10 items-stretch">
                     <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Корпоратив">
                         <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -299,7 +299,7 @@
                         </p>
                     </div>
 
-                    <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group col-span-2 sm:col-span-1" data-format="Презентация">
+                    <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Презентация">
                         <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="7" width="18" height="13" rx="2.5"/>
@@ -310,6 +310,21 @@
                         </div>
                         <p class="font-montserrat text-[13px] sm:text-[14px] leading-[135%] font-medium text-[#1A1A1A]">
                             Деловые<br>встречи
+                        </p>
+                    </div>
+
+                    <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="День рождения">
+                        <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/>
+                                <path d="M4 16c1.5 1 2.5 1 4 0s2.5-1 4 0 2.5 1 4 0 2.5-1 4 0"/>
+                                <line x1="2" y1="21" x2="22" y2="21"/>
+                                <line x1="12" y1="7" x2="12" y2="11"/>
+                                <path d="M12 2.5c-.7.8-.7 1.6 0 2.4.7-.8.7-1.6 0-2.4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <p class="font-montserrat text-[13px] sm:text-[14px] leading-[135%] font-medium text-[#1A1A1A]">
+                            Дни<br>рождения
                         </p>
                     </div>
                 </div>
