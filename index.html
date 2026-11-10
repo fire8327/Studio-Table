@@ -20,23 +20,19 @@
     <!-- /Yandex.Metrika counter -->
 </head>
 <body class="font-montserrat bg-white text-[#1A1A1A]">
-    <!-- Header -->
     <header class="py-3 px-4 sm:px-6 lg:px-8 w-full font-instrument bg-white sticky top-0 z-40 border-b border-[#1A1A1A]/5">
         <div class="max-w-[1280px] mx-auto flex items-center justify-between">
             <a href="index.html" class="flex flex-col gap-0.5 items-start text-left">
                 <img src="Assets/Images/header/logo.webp" alt="STUDIO TABLE - Catering & Events" class="w-24 sm:w-28 object-contain">
             </a>
 
-            <!-- Actions: 1. Phone handset, 2. WhatsApp, 3. Burger menu -->
             <div class="flex items-center gap-3 sm:gap-5">
-                <!-- 1. Иконка телефона (телефонной трубки) -->
                 <a href="tel:+7 (926) 879-87-35" class="p-1.5 text-[#1A1A1A] hover:opacity-60 transition-opacity flex items-center justify-center" aria-label="Позвонить">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                 </a>
 
-                <!-- 2. Иконка WhatsApp -->
                 <a href="https://wa.me/79268798735" target="_blank" rel="noopener noreferrer" class="p-1.5 text-[#1A1A1A] hover:opacity-60 transition-opacity flex items-center justify-center" aria-label="WhatsApp">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
@@ -44,7 +40,6 @@
                     </svg>
                 </a>
 
-                <!-- 3. Иконка бургер меню -->
                 <button id="toggler" type="button" class="cursor-pointer p-1.5 text-[#1A1A1A] hover:opacity-60 transition-opacity flex items-center justify-center" aria-label="Меню">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                         <line x1="3" y1="6" x2="21" y2="6"/>
@@ -55,7 +50,6 @@
             </div>
         </div>
 
-        <!-- Mobile menu dropdown -->
         <div id="menu" class="absolute z-30 left-0 top-full translate-y-[-600px] flex flex-col w-full bg-white py-6 px-6 border-b border-[#1A1A1A]/10 shadow-xl transition-all duration-300 items-center gap-6 text-[14px] font-semibold text-[#1A1A1A] uppercase tracking-wider">
             <a href="#concept" class="menu-link hover:opacity-70 transition-opacity">Концепция</a>
             <a href="#cycle" class="menu-link hover:opacity-70 transition-opacity">Процесс</a>
@@ -66,10 +60,8 @@
     </header>
 
     <main>
-        <!-- Hero section with Title, Placeholder & Form Card (as in mockup) -->
         <section class="w-full pt-8 pb-12 sm:pt-12 sm:pb-16 px-4 bg-white overflow-hidden">
             <div class="max-w-[1080px] mx-auto flex flex-col gap-8 sm:gap-10">
-                <!-- Top: Heading + Subtitle on left, Placeholder image on right -->
                 <div class="relative flex items-center justify-between gap-3 sm:gap-6">
                     <div class="flex flex-col gap-3 sm:gap-4 max-w-[270px] sm:max-w-[440px] z-1">
                         <h1 class="font-cormorant text-[32px] sm:text-[46px] lg:text-[54px] leading-[105%] font-normal text-[#1A1A1A] tracking-[-0.01em]">
@@ -82,7 +74,29 @@
                         </p>
                     </div>
 
-                    <!-- Placeholder for hero image -->
+                    <div class="flex-1 flex justify-end items-center -mr-1 sm:mr-0">
+                        <div class="w-[180px] sm:w-[300px] lg:w-[380px] aspect-4/3 rounded-[20px] bg-[#FBF9F6] border-2 border-dashed border-[#1A1A1A]/15 flex flex-col items-center justify-center gap-2.5 text-[#1A1A1A]/40 p-4 text-center select-none">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                            <span class="text-[11px] sm:text-[13px] font-medium leading-[125%]">Место для фото блюда</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex items-center justify-between gap-3 sm:gap-6">
+                    <div class="flex flex-col gap-3 sm:gap-4 max-w-[270px] sm:max-w-[440px] z-1">
+                        <h1 class="font-cormorant text-[32px] sm:text-[46px] lg:text-[54px] leading-[105%] font-normal text-[#1A1A1A] tracking-[-0.01em]">
+                            Организация<br>
+                            мероприятий<br>
+                            в Москве
+                        </h1>
+                        <p class="font-montserrat text-[13px] sm:text-[15px] lg:text-[16px] leading-[145%] text-[#1A1A1A]/70 max-w-[320px] sm:max-w-[380px]">
+                            Авторская кухня, эстетика каждой детали и безупречный сервис.
+                        </p>
+                    </div>
+
                     <div class="flex-1 flex justify-end items-center -mr-1 sm:mr-0">
                         <div class="w-[180px] sm:w-[300px] lg:w-[380px] aspect-4/3 rounded-[20px] bg-[#FBF9F6] border-2 border-dashed border-[#1A1A1A]/15 flex flex-col items-center justify-center gap-2.5 text-[#1A1A1A]/40 p-4 text-center select-none">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -95,7 +109,6 @@
                     </div>
                 </div>
 
-                <!-- Form Card -->
                 <div id="heroFormCard" class="w-full max-w-[560px] mx-auto bg-white border border-[#1A1A1A1A] rounded-[24px] p-6 sm:p-8 shadow-[0px_10px_35px_0px_#00000008] scroll-mt-[100px] lg:scroll-mt-[70px]">
                     <div class="flex flex-col gap-2 text-center mb-6">
                         <h2 class="font-cormorant text-[26px] sm:text-[32px] leading-[115%] font-normal text-[#1A1A1A]">
@@ -107,7 +120,6 @@
                     </div>
 
                     <form id="heroLeadForm" class="flex flex-col gap-4" onsubmit="return false;">
-                        <!-- Формат мероприятия -->
                         <div class="flex flex-col gap-1.5">
                             <label class="text-[12px] sm:text-[13px] font-semibold text-[#1A1A1A]">Формат мероприятия</label>
                             <div class="relative flex items-center">
@@ -139,9 +151,7 @@
                             </div>
                         </div>
 
-                        <!-- 2 columns: Количество гостей + Уровень сервиса -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                            <!-- Количество гостей -->
                             <div class="flex flex-col gap-1.5">
                                 <label class="text-[12px] sm:text-[13px] font-semibold text-[#1A1A1A]">Количество гостей</label>
                                 <div class="relative flex items-center">
@@ -155,7 +165,6 @@
                                 </div>
                             </div>
 
-                            <!-- Уровень сервиса -->
                             <div class="flex flex-col gap-1.5">
                                 <label class="text-[12px] sm:text-[13px] font-semibold text-[#1A1A1A]">Уровень сервиса</label>
                                 <div class="relative flex items-center">
@@ -180,7 +189,6 @@
                             </div>
                         </div>
 
-                        <!-- Submit Button -->
                         <button type="button" id="openContactModalBtn" class="cursor-pointer w-full mt-2 py-3.5 px-6 bg-[#1A1A1A] hover:bg-black text-white text-[14px] sm:text-[15px] font-medium rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-sm">
                             <span>Получить предложение</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -193,7 +201,6 @@
             </div>
         </section>
 
-        <!-- Concept statement -->
         <section id="concept" class="w-full py-8 lg:py-[100px] px-4 scroll-mt-[100px] lg:scroll-mt-[70px]">
             <div class="w-full max-w-[1280px] mx-auto flex flex-col gap-8">
                 <div class="flex flex-col gap-3 lg:gap-6 items-center text-center">
@@ -203,7 +210,6 @@
             </div>
         </section>
 
-        <!-- Cycle / Process (3 steps) -->
         <section id="cycle" class="w-full md:py-8 bg-[#FBF9F6] md:px-4 scroll-mt-[100px] lg:scroll-mt-[70px]">
             <div class="w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-8">
                 <div class="flex flex-col bg-[#FBF9F6] md:bg-white lg:border border-[#6B6B6B]/15 md:rounded-[8px] overflow-hidden lg:shadow-[0px_12px_24px_0px_#1A1A1A05]">
@@ -239,7 +245,6 @@
             </div>
         </section>
 
-        <!-- Formats section (Форматы мероприятий) -->
         <section id="formats" class="w-full py-12 sm:py-16 lg:py-20 px-4 bg-white scroll-mt-[100px] lg:scroll-mt-[70px]">
             <div class="max-w-[1180px] mx-auto flex flex-col gap-10 sm:gap-14 items-center">
                 <h2 class="font-cormorant text-[30px] sm:text-[38px] lg:text-[44px] leading-[115%] font-normal text-[#1A1A1A] text-center">
@@ -247,7 +252,6 @@
                 </h2>
 
                 <div class="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-6 lg:gap-0 lg:divide-x divide-[#1A1A1A]/10 items-stretch">
-                    <!-- 1. Корпоративные мероприятия -->
                     <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Корпоратив">
                         <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -261,7 +265,6 @@
                         </p>
                     </div>
 
-                    <!-- 2. Фуршеты и коктейли -->
                     <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Фуршет">
                         <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -280,7 +283,6 @@
                         </p>
                     </div>
 
-                    <!-- 3. Свадьбы -->
                     <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Свадьба">
                         <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -294,7 +296,6 @@
                         </p>
                     </div>
 
-                    <!-- 4. Частные ужины -->
                     <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group" data-format="Банкет">
                         <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -310,7 +311,6 @@
                         </p>
                     </div>
 
-                    <!-- 5. Деловые встречи -->
                     <div class="format-card flex flex-col items-center text-center gap-3.5 px-3 py-2 cursor-pointer group col-span-2 sm:col-span-1" data-format="Презентация">
                         <div class="w-12 h-12 flex items-center justify-center text-[#1A1A1A] group-hover:scale-110 transition-transform duration-300">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -326,13 +326,11 @@
                     </div>
                 </div>
 
-                <!-- Bottom thin divider line (as shown in mockup) -->
                 <div class="w-full h-px bg-[#1A1A1A]/10"></div>
             </div>
         </section>
     </main>
 
-    <!-- Modal for Contacts & Submission -->
     <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="relative w-full max-w-[480px] bg-white rounded-[24px] p-6 sm:p-8 shadow-2xl transition-all duration-300 transform scale-95" id="modalCard">
             <button type="button" id="closeContactModal" class="cursor-pointer absolute right-4 top-4 p-2 text-[#1A1A1A]/40 hover:text-[#1A1A1A] transition-colors" aria-label="Закрыть">
@@ -342,7 +340,6 @@
                 </svg>
             </button>
 
-            <!-- Modal Form State -->
             <div id="modalFormContent" class="flex flex-col gap-6">
                 <div class="flex flex-col gap-2 text-center">
                     <p class="font-cormorant text-[28px] sm:text-[32px] leading-[115%] font-normal text-[#1A1A1A]">
@@ -353,7 +350,6 @@
                     </p>
                 </div>
 
-                <!-- Parameters badge -->
                 <div id="modalSummaryBadge" class="py-2.5 px-4 rounded-[10px] bg-[#FBF9F6] border border-[#1A1A1A1A] text-[12px] sm:text-[13px] text-[#1A1A1A] text-center font-medium"></div>
 
                 <div class="flex flex-col gap-3">
@@ -393,7 +389,6 @@
                 </button>
             </div>
 
-            <!-- Modal Success State -->
             <div id="modalSuccessContent" class="hidden flex flex-col gap-6 items-center text-center py-4">
                 <div class="w-16 h-16 rounded-full bg-[#F5F0EB] flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -413,7 +408,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer id="contacts" class="py-16 px-6 lg:px-4 w-full font-instrument bg-[#1A1A1A] md:bg-[#111111] scroll-mt-[100px] lg:scroll-mt-[70px]">
         <div class="flex flex-col gap-8 max-w-[1280px] mx-auto">
             <div class="flex max-md:flex-col gap-10 md:justify-between">

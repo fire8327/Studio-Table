@@ -8,7 +8,7 @@ $("#toggler").click(() => {
     }
 })
 
-/* плавный скролл по якорным ссылкам с учётом шапки (блок - 100px на экранах < 1024px) */
+/* плавный скролл по якорным ссылкам */
 $('a[href^="#"]').on("click", function(e) {
     const targetHref = $(this).attr("href")
     if (targetHref && targetHref.length > 1 && $(targetHref).length) {
@@ -21,13 +21,11 @@ $('a[href^="#"]').on("click", function(e) {
             scrollTop: targetTop
         }, 500)
 
-        // закрыть мобильное меню при переходе
         if (!$("#menu").hasClass("translate-y-[-600px]")) {
             $("#menu").addClass("translate-y-[-600px]").removeClass("translate-y-0")
         }
     }
 })
-
 
 /* маска и форматирование телефона */
 const formatPhoneNumber = (value) => {
@@ -61,7 +59,6 @@ $('input[name="user_phone"]').on("input", function() {
     $(this).val(formatted)
     validateField("phone")
 })
-
 
 /* валидация полей контактов */
 const validateField = (field) => {
@@ -110,7 +107,6 @@ const validateField = (field) => {
 $('input[name="user_name"]').on("input", () => validateField("name"))
 $('input[name="user_email"]').on("input", () => validateField("email"))
 
-
 /* модальное окно с контактами */
 const openContactModal = () => {
     const format = $('select[name="format"]').val() || "Формат не выбран"
@@ -158,7 +154,6 @@ $(document).keydown((e) => {
     }
 })
 
-
 /* сбор данных формы */
 const GATEWAY_ENDPOINT = "https://agw.studiotable.ru/api/notifications/v1/delivery/send"
 const NOTIFICATION_UID = "studiotable_request"
@@ -173,7 +168,6 @@ const collectFormData = () => {
         email: $('input[name="user_email"]').val().trim()
     }
 }
-
 
 /* отправка формы */
 $("#submitProposalBtn").click(async function() {
@@ -204,7 +198,6 @@ $("#submitProposalBtn").click(async function() {
             throw new Error(result.message || "Не удалось отправить заявку")
         }
 
-        // Успешный результат: показываем финальную плашку в модалке
         $("#modalFormContent").addClass("hidden")
         $("#modalSuccessContent").removeClass("hidden")
     } catch (err) {
@@ -217,7 +210,6 @@ $("#submitProposalBtn").click(async function() {
     }
 })
 
-// Отправка по Enter в модальных полях
 $('input[name="user_name"], input[name="user_phone"], input[name="user_email"]').on("keydown", function(e) {
     if (e.key === "Enter") {
         e.preventDefault()
@@ -225,8 +217,7 @@ $('input[name="user_name"], input[name="user_phone"], input[name="user_email"]')
     }
 })
 
-
-/* выбор формата в блоке форматов с плавным скроллом к форме */
+/* выбор формата */
 $(".format-card").click(function() {
     const format = $(this).data("format")
     if (format) {
