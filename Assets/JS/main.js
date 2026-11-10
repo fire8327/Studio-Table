@@ -229,8 +229,8 @@ $(".format-card").click(function() {
     }, 500)
 })
 
-/* слайдеры с переключением каждые 3 секунды */
-const initSlider = (containerId, intervalMs = 3000) => {
+/* слайдер с плавным переключением (crossfade) */
+const initSlider = (containerId, intervalMs = 3000, fadeDurationMs = 1500) => {
     const $container = $(containerId)
     if (!$container.length) return
 
@@ -238,13 +238,28 @@ const initSlider = (containerId, intervalMs = 3000) => {
     if ($slides.length <= 1) return
 
     let currentIndex = 0
+    $slides.each(function(i) {
+        $(this).css({
+            "transition": `opacity ${fadeDurationMs}ms cubic-bezier(0.4, 0, 0.2, 1)`,
+            "z-index": i === 0 ? 2 : 1
+        })
+    })
+
     setInterval(() => {
         const nextIndex = (currentIndex + 1) % $slides.length
-        $slides.eq(currentIndex).removeClass("opacity-100").addClass("opacity-0 pointer-events-none")
-        $slides.eq(nextIndex).removeClass("opacity-0 pointer-events-none").addClass("opacity-100")
-        currentIndex = nextIndex
+        const $current = $slides.eq(currentIndex)
+        const $next = $slides.eq(nextIndex)
+
+        $slides.css("z-index", 1)
+        $current.css("z-index", 2)
+        $next.css("z-index", 3).removeClass("opacity-0 pointer-events-none").addClass("opacity-100")
+
+        setTimeout(() => {
+            $current.removeClass("opacity-100").addClass("opacity-0 pointer-events-none").css("z-index", 1)
+            $next.css("z-index", 2)
+            currentIndex = nextIndex
+        }, fadeDurationMs)
     }, intervalMs)
 }
 
-initSlider("#dishesSlider", 3000)
-initSlider("#slider1x1", 3000)
+initSlider("#slider1x1", 3500, 1000)
