@@ -130,13 +130,21 @@ const GATEWAY_ENDPOINT = "https://agw.studiotable.ru/api/notifications/v1/delive
 const NOTIFICATION_UID = "studiotable_request"
 
 const collectFormData = () => {
+    const format = $('select[name="format"]').val() || "Не указан"
+    const guests = $('input[name="guests"]').val().trim() || "Не указано"
+    const service = $('select[name="service_level"]').val() || "Стандарт"
+
+    const textLines = [
+        `Формат: ${format}`,
+        `Гостей: ${guests}`,
+        `Уровень сервиса: ${service}`
+    ]
+
     return {
-        format: $('select[name="format"]').val() || "Не указан",
-        guests: $('input[name="guests"]').val().trim() || "Не указано",
-        service_level: $('select[name="service_level"]').val() || "Стандарт",
         name: $('input[name="user_name"]').val().trim(),
         phone: $('input[name="user_phone"]').val().trim(),
-        email: $('input[name="user_email"]').val().trim()
+        email: $('input[name="user_email"]').val().trim(),
+        text: textLines.join("\n")
     }
 }
 
