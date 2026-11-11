@@ -1,32 +1,3 @@
-/* mobile menu */
-$("#toggler").click(() => {
-    const isHidden = $("#menu").hasClass("translate-y-[-600px]")
-    if (isHidden) {
-        $("#menu").removeClass("translate-y-[-600px]").addClass("translate-y-0")
-    } else {
-        $("#menu").addClass("translate-y-[-600px]").removeClass("translate-y-0")
-    }
-})
-
-/* плавный скролл по якорным ссылкам */
-$('a[href^="#"]').on("click", function(e) {
-    const targetHref = $(this).attr("href")
-    if (targetHref && targetHref.length > 1 && $(targetHref).length) {
-        e.preventDefault()
-        const isBelowLg = window.innerWidth < 1024
-        const offset = isBelowLg ? 100 : 70
-        const targetTop = $(targetHref).offset().top - offset
-
-        $('html, body').stop().animate({
-            scrollTop: targetTop
-        }, 500)
-
-        if (!$("#menu").hasClass("translate-y-[-600px]")) {
-            $("#menu").addClass("translate-y-[-600px]").removeClass("translate-y-0")
-        }
-    }
-})
-
 /* маска и форматирование телефона */
 const formatPhoneNumber = (value) => {
     let digits = value.replace(/\D/g, "")
